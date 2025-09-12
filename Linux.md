@@ -66,7 +66,13 @@ Linux is the foundational operating system for almost all servers and cloud envi
 |`pidof`|to find the process id of a certain process|if you know the name of a process `pidof name`|
 |`which`|fid the location of files,commands etc..|`which bash` to find the location of the bash, `which cat`|
 |`whatis`|what a command is for , or a shortest description of a command|`whatis grep` `whatis ls`|
-|``||``|
+|`groups`|to list all the groups a user is part of|`groups`, all groups in system - `cat/etc/groups`|
+|`sudo groupadd name`|to add new groups|`sudo groupadd cpp`|
+|`sudo groupdel name`|to delete a groups|`sudo groupdel cpp`|
+|`sudo gpasswd -a usrname grpname`|add one user to another grp||
+|`du`|to check the memory usage of a file or dir|`du -sh` show disk usage in human readable format|
+|`df`|to check the memory usage and free mem of a file or dir|`df -h`|
+|``|||
 
 ### Notes
 to execute a file you can use `./fiename` on the shell
