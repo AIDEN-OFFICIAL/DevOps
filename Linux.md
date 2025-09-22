@@ -27,6 +27,7 @@ Linux is the foundational operating system for almost all servers and cloud envi
 |`userdel`|to delete a user|`sudo userdel newname`dont delete home directory.`-r` for dleteing home dir also|
 |`su`|switching user |`su another_username`|
 |`exit`|exit from oe user to default user|`exit`|
+|`wc`|gives the count of the content in a file like the lines, words and characters|`wc flename` `wc filename -L` length of the longest line|
 |`sudo passwd `|setup password|`sudo passwd user_name`|
 |`sudo apt install`|to install packages|`sudo apt install finger`|
 |`man`|manuel for all commands |`man ls` `man cat` `man man` `man finger`|
@@ -36,12 +37,12 @@ Linux is the foundational operating system for almost all servers and cloud envi
 |`zip`|to create zipfiles|`zip new_zip_name.txt old_name.txt`|
 |`unzip`|to unzip a zip file|`unzip filename.zip`|
 |`less`|just like `cat` command , but it lazyloads so 1 page at a time|`less file.txt`|
-|`head`|to only see the begining of the file|`head filename.txt`|
+|`head`|to only see the begining of the file|`head filename.txt` `head -n3 filename` to add numbers of line|
 |`tail`|to only see the end of the file contents|`tail filename.txt`|
 |`cmp`|compare to files contents|`cmp file1.txt file2.txt`|
 |`diff`|to see difference in to file contents if theye have some similarities|`diff file1.txt file2.txt`|
 |`sort`|helps you sort the contents in a file |`cat filetxt (pipe symbol) sort `|
-|`sudo find`|to find or search a file |`sudo find /dir -name 'bible'` `find . -type f -empty`|
+|`sudo find`|to find or search a file |`sudo find /dir -name 'bible'` `find . -type f -empty` `find /dir -mtime +2` search files that is created before 2 days|
 |`chmod +x`|to execute a file|`chmod +x filename.txt` give read , write and execute permissions , rwx|
 |`chmod u+rw filename`|give permissionn to the user `u`, or group `g` or others `o` to read `r` , write `w` and execute `x`|`chmod u-w dir`cannot write on some directory for users|
 |`chown`|to change ownership of a file|`chown usernme`|
@@ -72,7 +73,8 @@ Linux is the foundational operating system for almost all servers and cloud envi
 |`sudo gpasswd -a usrname grpname`|add one user to another grp||
 |`du`|to check the memory usage of a file or dir|`du -sh` show disk usage in human readable format|
 |`df`|to check the memory usage and free mem of a file or dir|`df -h`|
-|``|||
+|`cal`|calander|`cal year` `cal mnth yr`|
+|`date`|date command to change the date of the system|`date -s "11/02/2026 12:00:40"` `cal mnth yr`|
 
 ### Notes
 to execute a file you can use `./fiename` on the shell
