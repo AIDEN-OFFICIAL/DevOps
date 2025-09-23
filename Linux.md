@@ -62,7 +62,7 @@ Linux is the foundational operating system for almost all servers and cloud envi
 |`sudo reboot`|system reboot|``|
 |`sudo shutdown`|shut down the system in 1 min|`sudo shutdown`|
 |`alias`|to create shortcuts for longer commands|`alias mm='clear'` to see all aliases - `alias`|
-|`grep`|'globally search a regular expression and print'find patterns in diff commands|`grep [options] pattern [file_name]`|
+|`grep`|'globally search a regular expression and print'find patterns in diff commands|`grep [options] pattern [file_name]` options:-i = caseInsensitivity ,-n=line number |
 |`top`|provides a real-time, dynamic view of a running system.|`top` press **i** for idle processes , press **k** and kill with PID|
 |`pidof`|to find the process id of a certain process|if you know the name of a process `pidof name`|
 |`which`|fid the location of files,commands etc..|`which bash` to find the location of the bash, `which cat`|
@@ -75,7 +75,8 @@ Linux is the foundational operating system for almost all servers and cloud envi
 |`df`|to check the memory usage and free mem of a file or dir|`df -h`|
 |`cal`|calander|`cal year` `cal mnth yr`|
 |`date`|date command to change the date of the system|`date -s "11/02/2026 12:00:40"` `cal mnth yr`|
-
+|`;` `&&`|we combine any two commands and get a combined result in a single go|`cal ; date ; pwd` `cal&&pwd&&cal`|
+|`ifconfig`|whole configurations of the network connections |`ifcconfig` `ifconfig eth0 down` the eth0 will be disconnected `ifconfig eth0 up`|
 ### Notes
 to execute a file you can use `./fiename` on the shell
 redirection > for storing the output of one command to a file , and >> for concatination of one file to another `echo "World" >> file.txt`
