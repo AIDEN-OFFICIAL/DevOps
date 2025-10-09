@@ -1,7 +1,53 @@
 ## 🐧 Linux Basic Commands Cheatsheet
 
-Linux is the foundational operating system for almost all servers and cloud environments in DevOps. Mastering its command-line interface is the first and most crucial step in  your learning journey. This file contains a quick reference to the most common commands you'll use every single day.
 
+Linux is the foundational operating system for almost all servers and cloud environments in DevOps. Mastering its command-line interface is the first and most crucial step in  your learning journey. This file contains a quick reference to the most common commands you'll use every single day.
+- open source OS
+- built on Unix OS
+- very secure
+- can have access to the entire system
+
+## Linux Architecture Components
+Kernel, System Libraries, User Space, Shell, System Utilities, Daemons, and Configuration files.
+- Kernel: Central part of Linux OS. Provide Interface between the user and computer harware
+- System libraries: System libraries are **collections of pre-written code** that provides common functions for other programs to use.
+- User Space: refers to the programs and apps that run on top of the OS
+- Shell: CLI that allows user to interact with the Linux OS
+- Daemons: background processes that run continuously and perform specific tasks such as network services, log management, etc.
+- Configuration files: used to configure Linux Os system such as the Network settings, system settings, security settings etc.
+
+## Linux Distros (Distributions)
+Different verisions of Linux OS ex: Ubuntu, Fedora, Debian, CentOS, Mint, Red Hat Enterprise Linux (RHEL), etc.
+
+## Linux files system 
+the way in which the operating system organizes and stores files and directories on a computer's hard drive or other storage devices.
+* hierarchial structure
+### Types of File system:
+- Ext4: widley used, high performance, reliability, and scalability.logs every changes
+- XFS: optimized for large-scale data storage and is commonly used in enterprise and high-performance computing environments
+- Btrfs: new, designed to be flexible, scalable, and easy to manage. Easy backup and restore data
+- NTFS: a file system commonly used in Microsoft Windows
+- FAT32: used in older Microsoft Windows systems. lots of limitations.
+
+## Organization of Linux File System
+```
+/bin - contains essential command-line utilities that are required for the system to function
+/boot - contains files needed for booting the system including the Linux kernel and boot loader configuration files
+/dev - contains device files that represent various devices and hardware components on the system
+/etc - contains configuration files for the system and various applications
+/home - contains the home directories for individual users
+/lib - contains libraries needed by the utilities in /bin and /sbin
+/media - a mount point for removable media such as CDs, DVDs, and USB drives
+/mnt - a mount point for temporarily mounting file systems
+/opt - contains third-party software packages
+/proc - A virtual file system that contains information about the system's process and kernel
+/root - the home directory for the root user
+/sbin - contains system executables, similar to /bin
+/sys - A virtual file system that provides an interface to the kernel's device drivers
+/tmp - Contains temporary files that can be deleted by the system when space is needed
+/usr - contains user utilities and libraries as well as data shared by multiple users
+/var - contains variable data such as log files, mail spools, and database files
+```
 ### Essential Commands
 
 | Command | Description | Example |
@@ -83,3 +129,6 @@ redirection > for storing the output of one command to a file , and >> for conca
 
 ### shortcuts
 `ctrl+shift` for a new tab of terminal
+
+# References:
+https://devops.pradumnasaraf.dev/linux/commands
