@@ -96,7 +96,7 @@ the way in which the operating system organizes and stores files and directories
 |`ip address`|to know the ip address|`ip address`|
 |`resolvectl status`|to see the DNS|``|
 |`ping`|we can use to findout the status of a website , if it s hosted or not|`ping websitename.com``ping -c -5 websitename.com`|
-|`netstat`|ports open on your linux|`netstat -tulpn`|
+|`netstat`|ports open on your linux|`netstat -tulpn` `-p`for PID's `-l` listening ports |
 |`ufw`|allows or blocks ports |`sudo ufw allow 80`|
 |`uname`|tells about the using system|`uname -a`|
 |`echo`|if you want a result of some calculations|`echo'4+3+5+7' (pipe) bc`|
@@ -126,6 +126,40 @@ the way in which the operating system organizes and stores files and directories
 ### Notes
 to execute a file you can use `./fiename` on the shell
 redirection > for storing the output of one command to a file , and >> for concatination of one file to another `echo "World" >> file.txt`
+
+### How to setup Opesn ssh
+`ssh` to check weather ssh clien is installed
+
+`ssh user@ip -P122` to check ssh client is setup (ssh username and IP with port) example `ssh user@192.168.1.10`
+Once connected, you can run Linux commands on that remote machine.
+
+
+`ssh localhost` check ssh server is installed
+
+install ssh server: `ssh apt-get install openssh-server` then give password
+
+File transfer:
+Local → Remote
+`scp file.txt username@server_ip:/home/username/` (scp-secure copy)
+
+Remote → Local
+`scp username@server_ip:/path/to/remote/file.txt /path/to/local/destination/`
+
+
+SSH can create secure tunnels for other applications.
+
+Automation & DevOps:
+In system administration, SSH is used by scripts and tools (like Ansible or Git) to manage servers without typing passwords every time (using SSH keys).
+Services like AWS EC2, DigitalOcean, or Google Cloud let you connect to your virtual servers (droplets or instances) using SSH.
+
+
+SSH Keys (instead of passwords):
+SSH can use key-based authentication, which is more secure than typing a password each time.
+You create a public/private key pair:
+`ssh-keygen`
+Then copy your public key to the server:
+`ssh-copy-id username@server_ip`
+After that, you can log in without a password.
 
 ### shortcuts
 `ctrl+shift` for a new tab of terminal
