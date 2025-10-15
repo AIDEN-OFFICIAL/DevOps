@@ -208,12 +208,12 @@ the one who collects the requirements for the buisness to grow from the customer
 #### Product Manager:
 the one who connects with the Business Analyst and finalizes the requirements,Dates of completion, he fixes the priorities.The Pm cannot directly interact with the devolopers but interact with the PO.
 #### Product owner:
-Divides the priorities selected by the PM breaking them doen to acctionable items called Epics.They also dont directly interact with the developers , but interacts with the Software Architects.
+Divides the priorities selected by the PM, breaking them doen to actionable items called Epics.They also dont directly interact with the developers, but interact with the Software Architects.
 #### UI/UX designer:
 Designs user interface and user experiences
 #### Software Architects:
 Designs technical system structure and frameworks. He is the person responsible for diving deep into the techincal parts of the Epics and requirements.interacts with the PO and creates the HLD and LLD. Then the new requirements is created.
-**To complete this requirements there is new team - scrum team**
+**To complete this requirements, there is new team - scrum team**
 #### Developers:
 build based on the req
 #### Devops Engineers:
@@ -221,6 +221,12 @@ help with dev and ops
 #### QE(Quality engineers):
 Test and ensure quality
 #### SRE:
-checks the reliablity of the software, Ensure uptime, peerformance, makes dashboards documents, tests the final product entirely.
+checks the reliablity of the software, Ensure uptime, peerformance, makes dashboards and documents, tests the final product entirely.
 #### Technical writers:
-creates Documentation for users and developers.
+Creates documentation for users and developers.
+
+## Virtual machine
+Creating virtual environments, we can create virtual machines inside a single server so that we can split the server into multiple servers logically. Virtual machines installed in a system act independently, in terms of memory, CPU, or processing.
+
+**Hypervisor** is responsible for creating Virtual Machines.
+example: VMware, Xen
