@@ -27,6 +27,7 @@ mongo:7 → an image with MongoDB setup
 - A container is a running instance of an image.
 - You can create, start, stop, or delete containers anytime.
 - Multiple containers can be created from the same image.
+  
 Example:
 
 docker run -d --name myapp node:18
