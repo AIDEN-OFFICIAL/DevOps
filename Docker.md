@@ -67,9 +67,10 @@ You can:
 - `docker logs Cont_ID` to get the logs of a specific container
 - `docker exec -it Cont_ID /bin/bash` to get the bash of a container, so that we can perform different commands specific to the container, like ls, cd, env 
 - `docker exec -it Cont_ID /bin/sh` same
-- `docker network create Net_workName` to make two containers to interact with each other without the need for ports or connections(suppose monogo db has to interact with mongo Express) 
+- `docker network create Net_workName` to make two containers to interact with each other without the need for ports or connections(suppose MongoDB has to interact with Mongo Express) 
 - `docker network ls` to list all network connections
-- 
+-  `docker run -d -p 27017:27017 --name mongo -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=qwerty --network mongo_net mongo`Here we have set up the mongo to run in detach mode, added envs, bound ports, added a new  name, and connected with a network.
+-  ``
 
 ## Docker vs VM's
 | **Aspect** | **Virtual Machines (VMs)** | **Docker Containers** |
