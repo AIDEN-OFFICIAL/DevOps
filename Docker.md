@@ -53,6 +53,8 @@ You can:
 - `docker images` gives the list of images present in the device
 - `docker run 'image name'` to run a specific image. If not found then downloads from the Docker hub
 - `docker run -d 'Image_name'` Runs the image in the Background in detach mode .
+- `docker run -d -e MYSQL_Root_Password=secret mysql` we can also set up -e(enviornment variables while installing and running in detatched mode)
+- `docker run -d --name 'Mysq-newname' mysql:8.0` e can give costum names for each image
 - `docker rmi 'image name` remove one image from the device 
 - `docker rm 'container name` remove any Container from the device 
 - `docker run -it ubuntu` run ubuntu in interactive mode.`exit` to come out of interactive mode
@@ -61,4 +63,23 @@ You can:
 #### run command always creates a new container, whereas there are start and stop commands to execute existing containers.
 - `docker start 'name or Id'`to start a Docker container
 - `docker stop 'name or Id'`to stop a Docker container
+- `docker run -d -e 'setup env' -p8080:3360 mysql` so the default port is 3360, which is binded  with the 8080 so the mysql will run on this port container
+- `docker logs Cont_ID` to get the logs of a specific container
+- `docker exec -it Cont_ID /bin/bash` to get the bash of a container, so that we can perform different commands specific to the container, like ls, cd, env 
+- `docker exec -it Cont_ID /bin/sh` same
+- `docker network create Net_workName` to make two containers to interact with each other without the need for ports or connections(suppose monogo db has to interact with mongo Express) 
+- `docker network ls` to list all network connections
 - 
+
+## Docker vs VM's
+| **Aspect** | **Virtual Machines (VMs)** | **Docker Containers** |
+|-------------|-----------------------------|------------------------|
+| **Virtualization Level** | VMs virtualize **hardware**. Each VM runs a full guest OS (including its own kernel, libraries, and applications). | Docker virtualizes only the **application layer**. Containers share the **host OS kernel**, isolating applications using kernel features.|
+| **Resource Usage** | Heavier, since each VM includes a full OS, taking more CPU, memory, and storage. | Lightweight, as containers share the host kernel and only package the application and its dependencies. |
+| **Startup Time** | Slower — usually takes **minutes** to boot a full OS. | Much faster — containers start in **seconds** since no OS boot is needed. |
+| **OS and Kernel Dependence** | **OS-agnostic** — you can run different operating systems (e.g., Windows VM on a Linux host) because the hypervisor abstracts hardware. | **Kernel-dependent** — containers share the host OS kernel (usually Linux). They can only run systems compatible with that kernel. |
+| **How It Runs on Non-Linux Systems** | No issue — the VM hypervisor handles any OS guest. | On Windows/macOS, Docker Desktop uses a **lightweight Linux VM** (via Hyper-V, WSL2, or Apple Hypervisor) to provide a Linux kernel for containers. |
+| **Performance** | Slightly lower due to hardware-level virtualization overhead. | Higher performance since containers run natively on the host OS kernel with less overhead. |
+| **Isolation Level** | Strong isolation — each VM runs a full OS, providing complete separation. | Weaker isolation compared to VMs (still secure), since containers share the same kernel but have process-level isolation. |
+| **Storage and Portability** | VM images are large (gigabytes) and less portable. | Docker images are lightweight (megabytes) and highly portable across environments. |
+| **Use Cases** | Ideal for running multiple OS types, strong isolation, or legacy applications that require full system environments. | Ideal for microservices, CI/CD, and lightweight, scalable application deployments. |
