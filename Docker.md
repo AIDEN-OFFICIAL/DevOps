@@ -11,6 +11,10 @@ Reasons :
 docker-compose down --rmi all
 - A virtual machine is an abstraction of a machine (physical hardware)
 
+## Docker Daemon
+The brain of Docker.
+
+The Docker Daemon is the background service that runs on your host machine and manages all Docker objects — containers, images, networks, and volumes.
 
 ## 🧱Docker Images
 
@@ -40,3 +44,21 @@ Docker Hub is a public repository for Docker images (like GitHub for code).
 You can:
 - Pull images from Docker Hub → docker pull node:18
 - Push your own images → share with others or reuse later.
+
+### Docker Tags: Just like versions.
+
+## Docker commands:
+- `docker pull 'image name'` to pull an Image from Docker Hub to the local (pulling latest version)
+- `docker pull 'image name':'version'`
+- `docker images` gives the list of images present in the device
+- `docker run 'image name'` to run a specific image. If not found then downloads from the Docker hub
+- `docker run -d 'Image_name'` Runs the image in the Background in detach mode .
+- `docker rmi 'image name` remove one image from the device 
+- `docker rm 'container name` remove any Container from the device 
+- `docker run -it ubuntu` run ubuntu in interactive mode.`exit` to come out of interactive mode
+- `docker ps` show all running containers
+- `docker ps -a` status of all images (-a, for all images)
+#### run command always creates a new container, whereas there are start and stop commands to execute existing containers.
+- `docker start 'name or Id'`to start a Docker container
+- `docker stop 'name or Id'`to stop a Docker container
+- 
