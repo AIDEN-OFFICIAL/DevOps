@@ -69,6 +69,8 @@ You can:
 - `docker exec -it Cont_ID /bin/sh` same
 - `docker network create Net_workName` to make two containers to interact with each other without the need for ports or connections(suppose MongoDB has to interact with Mongo Express) 
 - `docker network ls` to list all network connections
+- `docker network rm <network_name>` remove networks if they're not used by any containers
+- `docker network inspect <network_name>`inspect if this network is being used
 -  `docker run -d -p 27017:27017 --name mongo -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=qwerty --network mongo_net mongo`Here we have set up the mongo to run in detach mode, added envs, bound ports, added a new  name, and connected with a network.
 -  ``
 
@@ -84,3 +86,52 @@ You can:
 | **Isolation Level** | Strong isolation — each VM runs a full OS, providing complete separation. | Weaker isolation compared to VMs (still secure), since containers share the same kernel but have process-level isolation. |
 | **Storage and Portability** | VM images are large (gigabytes) and less portable. | Docker images are lightweight (megabytes) and highly portable across environments. |
 | **Use Cases** | Ideal for running multiple OS types, strong isolation, or legacy applications that require full system environments. | Ideal for microservices, CI/CD, and lightweight, scalable application deployments. |
+
+
+## Docker Compose
+Docker Compose is a tool that lets you define and manage multiple Docker containers (services) that work together, all from one configuration file called docker-compose.yml.
+
+### 🧠 Why Use Docker Compose?
+
+Let’s say you have a full-stack project:
+
+- Node.js backend
+- MongoDB database
+- Nginx reverse proxy
+
+Without Compose, you’d have to run 3 separate Docker commands, configure networks manually, link containers, expose ports, and remember environment variables for each.
+😫 That’s painful.
+
+With Compose, you can define all 3 in one YAML file 
+and Docker will automatically:
+- Create a network for them to talk to each other
+- Build and start containers
+- Manage dependencies (like starting MongoDB before Node)
+- Handle volumes (for persistent data)
+- Simplify startup/shutdown
+- Reproducibility, One config = same environment everywhere
+
+```yaml
+services:
+  mongo:
+    image: mongo
+    ports:
+    - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: qwerty
+  mongo-exp:
+   image: mongo-express
+   ports: 
+   - "27017:27017"
+   environment: 
+     ME_CONFIG_MONGODB_ADMINUSERNAME: admin
+     ME_CONFIG_MONGODB_ADMINPASSWORD: qwerty
+     ME_CONFIG_BASICAUTH_USERNAME: admin
+     ME_CONFIG_BASICAUTH_PASSWORD: qwerty
+     ME_CONFIG_MONGODB_URL: "mongodb://admin:qwerty@mongo:27017/"
+```
+**Docker Compose**
+- `docker compose -f fileName.yaml up -d` to deploy a yaml file config to running containers in detach mode (up: starts the file )
+- `docker compose -f fileName.yaml down` to remove files from our container
+- 
