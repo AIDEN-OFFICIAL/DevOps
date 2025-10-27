@@ -90,7 +90,6 @@ You can:
 
 ## Docker Compose
 Docker Compose is a tool that lets you define and manage multiple Docker containers (services) that work together, all from one configuration file called docker-compose.yml.
-
 ### 🧠 Why Use Docker Compose?
 
 Let’s say you have a full-stack project:
@@ -134,4 +133,32 @@ services:
 **Docker Compose**
 - `docker compose -f fileName.yaml up -d` to deploy a yaml file config to running containers in detach mode (up: starts the file )
 - `docker compose -f fileName.yaml down` to remove files from our container
-- 
+
+## Docker File creation
+### commands:
+`FROM <image>` - this specifies the base image that the build will extend.
+`WORKDIR <path>` - this instruction specifies the "working directory" or the path in the image where files will be copied and commands will be executed.
+`COPY <host-path> <image-path> `- this instruction tells the builder to copy files from the host and put them into the container image.
+`RUN <command>` - this instruction tells the builder to run the specified command.
+`ENV <name> <value>` - this instruction sets an environment variable that a running container will use.
+`EXPOSE <port-number> `- this instruction sets configuration on the image that indicates a port the image would like to expose.
+`USER <user-or-uid>` - this instruction sets the default user for all subsequent instructions.
+`CMD ["<command>", "<arg1>"]` - this instruction sets the default command a container using this image will run.
+
+## Dockerizing our APP
+Create a docker file :
+
+example:
+```yaml
+FROM node
+ENV MONGO_URI=mongodb://admin:qwerty@localhost:27017/usersDB?authSource=admin \
+    PORT=3000 \
+    MONGO_INITDB_ROOT_USERNAME=admin \
+    MONGO_INITDB_ROOT_PASSWORD=qwerty
+WORKDIR /testapp
+COPY . .
+RUN npm i
+CMD ["node", "server.js"]
+# WORKDIR /app
+
+```
