@@ -45,13 +45,19 @@ You can:
 - Pull images from Docker Hub → docker pull node:18
 - Push your own images → share with others or reuse later.
 
+#### commands:
+- `docker pull 'image name'` to pull an Image from Docker Hub to the local (pulling the latest version)
+- `docker pull 'image name':'version'` pulling specific versions
+- `docker login` to connect to hub
+- `docker login -u <username>`if the login is not setup
+- `docker push <username>`
 ### Docker Tags: Just like versions.
 
 ## Docker commands:
-- `docker pull 'image name'` to pull an Image from Docker Hub to the local (pulling latest version)
+- `docker pull 'image name'` to pull an Image from Docker Hub to the local (pulling the latest version)
 - `docker pull 'image name':'version'`
 - `docker images` gives the list of images present in the device
-- `docker run 'image name'` to run a specific image. If not found then downloads from the Docker hub
+- `docker run 'image name'` to run a specific image. If not found, then downloads from the Docker hub
 - `docker run -d 'Image_name'` Runs the image in the Background in detach mode .
 - `docker run -d -e MYSQL_Root_Password=secret mysql` we can also set up -e(enviornment variables while installing and running in detatched mode)
 - `docker run -d --name 'Mysq-newname' mysql:8.0` e can give costum names for each image
@@ -72,6 +78,7 @@ You can:
 - `docker network rm <network_name>` remove networks if they're not used by any containers
 - `docker network inspect <network_name>`inspect if this network is being used
 -  `docker run -d -p 27017:27017 --name mongo -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=qwerty --network mongo_net mongo`Here we have set up the mongo to run in detach mode, added envs, bound ports, added a new  name, and connected with a network.
+-  `docker rename old_container_name new_container_name` to change name of container anytime.
 -  ``
 
 ## Docker vs VM's
@@ -113,7 +120,8 @@ and Docker will automatically:
 ```yaml
 services:
   mongo:
-    image: mongo
+    image: mongo //image name
+    container_name: my-mongo-db //to setup the name for container
     ports:
     - "27017:27017"
     environment:
@@ -129,10 +137,20 @@ services:
      ME_CONFIG_BASICAUTH_USERNAME: admin
      ME_CONFIG_BASICAUTH_PASSWORD: qwerty
      ME_CONFIG_MONGODB_URL: "mongodb://admin:qwerty@mongo:27017/"
+   app: // also included the app so that everything runs in a single network
+    build: .   // Docker Compose looks in the current directory (.), finds and builds an image from that Dockerfile, then uses that image to run the app container.
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+      - MONGO_URI=mongodb://admin:qwerty@mongo:27017/usersDB?authSource=admin
+    depends_on:   //tells Docker Compose that one service depends on another, so here mongo runs before app
+      - mongo
 ```
 **Docker Compose**
 - `docker compose -f fileName.yaml up -d` to deploy a yaml file config to running containers in detach mode (up: starts the file )
 - `docker compose -f fileName.yaml down` to remove files from our container
+- `docker compose up -d` Starts or updates your services based on the Compose file
 
 ## Docker File creation
 ### commands:
@@ -162,3 +180,38 @@ CMD ["node", "server.js"]
 # WORKDIR /app
 
 ```
+### commands:
+- `docker build -t userapp:0.02 .` for building the new Docker image from a Docker file
+- `docker run -d -p 3000:3000 userapp:0.02` runs it as a container (with port mapping).
+- `docker build -t aidenct/user_app .` for building the new Docker image onto a Docker Hub repo.
+- `docker system prune -a --volumes` Removes unused containers, images, networks, and volumes.
+
+## Docker Volumes
+Volumes are persistent  data stores for containers, meaning it doesn’t get deleted when the container stops or is removed.
+
+exapmle:
+```yaml
+services:
+  mongo:
+    image: mongo
+    container_name: my-mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+volumes:
+  mongo_data:
+    name:<any name custom>
+
+```
+### Commands:
+- `docker volume ls` to list the volumes
+- `docker volume rm <name>` Delete a volume
+- `docker volume inspect <name>` See details about a volume
+- `docker compose -f mongodb.yaml down -v`If you modify your volumes in mongodb.yaml, run
+- ``
+### Notes:
+The Docker Compose file will run the entire app and all its dependencies specified within it in a single network, eliminating the need for a Docker file to be built and run. A single    command for Docker Compose is required.
+
+The Docker compose file will replace or overwrite the ENV written using a Docker file  
