@@ -79,7 +79,11 @@ You can:
 - `docker network inspect <network_name>`inspect if this network is being used
 -  `docker run -d -p 27017:27017 --name mongo -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=qwerty --network mongo_net mongo`Here we have set up the mongo to run in detach mode, added envs, bound ports, added a new  name, and connected with a network.
 -  `docker rename old_container_name new_container_name` to change name of container anytime.
--  ``
+
+## Docker Network Types:
+1. Host: containers uses the same network as our host machine, and does not have any ip address, it uses the host machine’s IP.
+2. null: Type of container used when we want a continer to be in a isolated network, It has no internet access and cannot communicate with other containers.
+3. bridge: type of networks can communicate with differnt containers and outside world. There are two types (custom<best for container to container comms > and default <created by docker>). 
 
 ## Docker vs VM's
 | **Aspect** | **Virtual Machines (VMs)** | **Docker Containers** |
@@ -149,7 +153,7 @@ services:
 ```
 **Docker Compose**
 - `docker compose -f fileName.yaml up -d` to deploy a yaml file config to running containers in detach mode (up: starts the file )
-- `docker compose -f fileName.yaml down` to remove files from our container
+- `docker compose -f fileName.yaml down` removes the entire containers stated inside the compose file.
 - `docker compose up -d` Starts or updates your services based on the Compose file
 
 ## Docker File creation
@@ -189,7 +193,12 @@ CMD ["node", "server.js"]
 ## Docker Volumes
 Volumes are persistent  data stores for containers, meaning it doesn’t get deleted when the container stops or is removed.
 
-exapmle:
+## Types of Volumes:
+1. Named Volumes: A user-defined persistent volume managed by Docker.You assign it a name so it’s easy to reuse and manage. `docker run -v vol_name:/path_inside_container image_name`
+2. Anonymous Volumes: Automatically created by Docker without a name, when you mount storage without specifying one.`docker run -v /data/db image_name`
+3. Bind Mounts: Maps a specific local folder on your host machine to a folder inside the container.`docker run -v /path/on/host:/path_inside_container image_name`
+
+example:
 ```yaml
 services:
   mongo:
@@ -207,11 +216,14 @@ volumes:
 ```
 ### Commands:
 - `docker volume ls` to list the volumes
+- `docker volume create <customVolume>` to create custom volume 
 - `docker volume rm <name>` Delete a volume
 - `docker volume inspect <name>` See details about a volume
-- `docker compose -f mongodb.yaml down -v`If you modify your volumes in mongodb.yaml, run
-- ``
+- `docker compose -f mongodb.yaml down -v`If you modify your volumes in mongodb.yaml, and then restart using `docker compose -f mongodb.yaml up -d`
+- `docker volume prune` removes anonymous volumes, unused volumes
 ### Notes:
 The Docker Compose file will run the entire app and all its dependencies specified within it in a single network, eliminating the need for a Docker file to be built and run. A single    command for Docker Compose is required.
 
-The Docker compose file will replace or overwrite the ENV written using a Docker file  
+The Docker compose file will replace or overwrite the ENV written using a Docker file.
+
+A named volume (also called a custom volume) is a user-defined persistent storage area that you give a name to.
