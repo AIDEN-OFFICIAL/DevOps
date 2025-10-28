@@ -185,7 +185,7 @@ CMD ["node", "server.js"]
 
 ```
 ### commands:
-- `docker build -t userapp:0.02 .` for building the new Docker image from a Docker file
+- `docker build -t userapp:0.02 .` for building the new Docker image from a Docker file, (-t is for tags)
 - `docker run -d -p 3000:3000 userapp:0.02` runs it as a container (with port mapping).
 - `docker build -t aidenct/user_app .` for building the new Docker image onto a Docker Hub repo.
 - `docker system prune -a --volumes` Removes unused containers, images, networks, and volumes.
