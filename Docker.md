@@ -221,9 +221,29 @@ volumes:
 - `docker volume inspect <name>` See details about a volume
 - `docker compose -f mongodb.yaml down -v`If you modify your volumes in mongodb.yaml, and then restart using `docker compose -f mongodb.yaml up -d`
 - `docker volume prune` removes anonymous volumes, unused volumes
+
+---
+# 🐳 Modern Docker Developer Commands
+
+| **Command**                    | **Purpose**                                                                                 | **Example Usage**                                | **Notes**                                                               |
+| ------------------------------ | ------------------------------------------------------------------------------------------- | ------------------------------------------------ | ----------------------------------------------------------------------- |
+| `docker init`                  | Automatically creates a `Dockerfile`, `.dockerignore`, and `compose.yaml` for your project. | `docker init`                                    | Easiest way to containerize new apps quickly (Node, Python, Go, etc.).  |
+| `docker compose watch`         | Watches source code for changes and automatically rebuilds/restarts services.               | `docker compose watch`                           | Enables live reloading in development — like hot reload for containers. |
+| `docker debug`                 | Runs your app in a debug-ready container, setting breakpoints and attaching debuggers.      | `docker debug myapp`                             | Great for diagnosing runtime issues in development environments.        |
+| `docker scout`                 | Analyzes images for vulnerabilities and gives security insights.                            | `docker scout cves myapp:latest`                 | Helps keep images secure and up to date with CVE scanning.              |
+| `docker buildx`                | Advanced image building tool for multi-platform and optimized builds.                       | `docker buildx build -t myapp:latest .`          | Builds for ARM, AMD64, or cloud environments efficiently.               |
+| `docker build --builder cloud` | Builds images using Docker’s cloud builder instead of local resources.                      | `docker build --builder cloud -t myapp:latest .` | Speeds up builds using Docker-hosted infrastructure.                    |
+
+---
+
 ### Notes:
 The Docker Compose file will run the entire app and all its dependencies specified within it in a single network, eliminating the need for a Docker file to be built and run. A single    command for Docker Compose is required.
 
 The Docker compose file will replace or overwrite the ENV written using a Docker file.
 
 A named volume (also called a custom volume) is a user-defined persistent storage area that you give a name to.
+
+Best Practices:
+- Use specific tags rather than latest.
+- Combine commands in Docker compose.
+- Dont run container as root
