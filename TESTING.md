@@ -210,7 +210,7 @@ Understand *what* needs to be tested.
 
 **Deliverables:**
 
-* Requirement Traceability Matrix (RTM)
+* Requirement Traceability Matrix (RTM) **
 * Testable Requirements List
 
 ---
@@ -218,7 +218,7 @@ Understand *what* needs to be tested.
 ### 📝 2. Test Planning
 Define the *strategy and approach* for testing.
 
-* Prepare a **Test Plan document**.
+* Prepare a **Test Plan document**. **
 * Define **scope, objectives, resources, environment, and schedule**.
 * Identify tools and responsibilities.
 * Estimate effort and timelines.
@@ -240,7 +240,7 @@ Create detailed **test cases, test scripts, and test data**.
 
 **Deliverables:**
 
-* Test Cases Document
+* Test Cases Document **
 * Test Data
 * Automation Scripts
 
@@ -256,7 +256,7 @@ Prepare the hardware and software environment for testing.
 **Deliverables:**
 
 * Test Environment Configuration Report
-* Smoke Test Results (environment validation)
+* Smoke Test Results (environment validation) (test if an application is stable)
 
 ---
 
@@ -426,4 +426,32 @@ Grey box testing is a mix of both black and white box methods, where the tester 
 
 ---
 > In short: Detect → Report → Fix → Track ✅
+
+---
+
+# 🪲 Bug Life Cycle (Concise)
+
+**Flow:**
+
+> New → Assigned → Open → Fixed → Retested → Verified → Closed
+
+**Possible alternate paths:**
+
+> Rejected / Deferred / Reopened
+
+---
+
+### 🧭 Explanation 
+
+1. **New** – Tester logs a new defect.
+2. **Assigned** – Bug assigned to a developer.
+3. **Open** – Developer starts working on it.
+4. **Fixed** – Developer resolves the issue.
+5. **Retested** – Tester checks the fix.
+6. **Verified** – Tester confirms the bug is resolved.
+7. **Closed** – Defect is officially closed.
+8. **Reopened/Rejected/Deferred** – If issue persists, invalid, or postponed.
+
+---
+
 
