@@ -454,4 +454,63 @@ Grey box testing is a mix of both black and white box methods, where the tester 
 
 ---
 
+# 🧩 Unit Testing — (Level 1 of Software Testing)
+Unit testing is the process of **testing individual components, functions, or modules** of your application **in isolation** — without depending on databases, APIs, or UI.
+The goal is to verify that each “unit” (like a function or class) **works as expected**.
+
+---
+
+### ⚙️ Example 
+Let’s say you have this function:
+
+```js
+function add(a, b) {
+  return a + b;
+}
+```
+
+Your unit test will check if:
+
+```js
+expect(add(2, 3)).toBe(5);
+```
+
+### 🧰 Common Tools
+ - Backend:  **Jest** / Mocha + Chai
+ - Frontend: Jest + React Testing Library
+ - MongoDB Mocking: mongodb-memory-server
+
+
+1. **Test in Isolation** – Mock dependencies like APIs, DB calls, or external services.
+2. **Write Small, Focused Tests** – One test per function/behavior.
+3. **Use AAA Pattern - (Arrange [set up test data], Act[ call the function], Assert[verify the result])**
+4. **Run Tests Automatically** – Integrate with CI tools like GitHub Actions later.
+
+
+---
+
+# 🔗 Integration Testing (Level 2 of Software Testing)
+Integration testing checks how **multiple modules or components work together** once they are combined.
+It ensures that **data flow, interactions, and communication** between units happen correctly.
+In short, it’s about testing **connections**, not just logic.
+
+
+### ⚙️ Example
+
+* You’ve already tested your `loginController()` and `UserModel` separately (unit tests).
+* Now you test **them together** — does the controller properly call the model, validate user credentials, and return the right response?
+
+This verifies that your **backend modules integrate properly**.
+
+
+### 🧰 Tools for Integration Testing (MERN)
+- Backend APIs:**Supertest** (with Jest or Mocha)
+- Database Integration: mongodb-memory-server
+- Frontend–Backend: Cypress / Playwright
+
+### 🎯 Goal
+
+To ensure that **modules interact correctly**, **data passes smoothly**, and the system behaves as a whole.
+
+
 
