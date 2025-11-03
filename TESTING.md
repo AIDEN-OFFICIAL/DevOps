@@ -455,6 +455,8 @@ Grey box testing is a mix of both black and white box methods, where the tester 
 ---
 
 # 🧩 Unit Testing — (Level 1 of Software Testing)
+Tested by: Developers
+
 Unit testing is the process of **testing individual components, functions, or modules** of your application **in isolation** — without depending on databases, APIs, or UI.
 The goal is to verify that each “unit” (like a function or class) **works as expected**.
 
@@ -490,6 +492,8 @@ expect(add(2, 3)).toBe(5);
 ---
 
 # 🔗 Integration Testing (Level 2 of Software Testing)
+Tested by: Developers/ Testers
+
 Integration testing checks how **multiple modules or components work together** once they are combined.
 It ensures that **data flow, interactions, and communication** between units happen correctly.
 In short, it’s about testing **connections**, not just logic.
@@ -511,6 +515,91 @@ This verifies that your **backend modules integrate properly**.
 ### 🎯 Goal
 
 To ensure that **modules interact correctly**, **data passes smoothly**, and the system behaves as a whole.
+
+---
+Here’s a clean, concise note on **System Testing**, perfectly aligned with your roadmap 👇
+
+---
+
+# 🖥️ System Testing (Level 3 of Software Testing)
+Tested by: Testers
+
+System testing validates the **entire software system as a whole**.
+After integration testing confirms modules work together, system testing ensures the **complete application meets the specified requirements** — both functional and non-functional.
+It’s performed on a fully integrated environment, similar to the real-world setup.
+
+---
+
+### ⚙️ Example (MERN Context)
+
+Once your full MERN app (frontend + backend + database) is ready:
+You test real user actions like:
+
+* Register → Login → Add to cart → Checkout
+  This checks if the entire flow works correctly — not just individual APIs or components.
+
+---
+
+### 🧠 Types of System Testing
+
+- **Functional Testing**  : Ensures features work as expected (e.g., user can place orders).Tools: Selenium, Cypress, Playwright
+- **Performance Testing**: Checks speed, load handling, and responsiveness.Tools: JMeter, k6
+- **Security Testing**: Ensures data protection and access control.Tools: OWASP ZAP
+- **Usability Testing**: Verifies ease of use and design clarity.
+- **Compatibility Testing**: Confirms the app works across devices, OS, and browsers.Tools: BrowserStack.
+
+### 🎯 Goal
+
+To verify that the **entire system functions correctly**, satisfies **business requirements**, and is ready for **release testing (UAT)**.
+
+
+---
+
+# ✅ Acceptance Testing (Level 4 of Software Testing)
+Tested by: Client/Testers
+
+Acceptance testing is the **final level of testing**, done to confirm whether the software is **ready for delivery** to the client or end-users.
+It ensures the system meets **business requirements** and behaves as expected in real-world use.
+This stage often involves both testers and the **client or end-user**.
+
+### ⚙️ Example (MERN Context)
+
+You’ve built a full eCommerce site.
+Now, the client checks if they can:
+
+* Create an account
+* Add items to the cart
+* Place an order and receive confirmation
+
+If all works smoothly, the software is **accepted**.
+
+---
+
+### 🧠 Types of Acceptance Testing
+
+| Type                                     | Description                                                   |
+| ---------------------------------------- | ------------------------------------------------------------- |
+| **User Acceptance Testing (UAT)**        | Done by end-users or clients to verify business flow.Tools: TestLink, Jira, Zephyr     |
+| **Business Acceptance Testing (BAT)**    | Ensures all business goals and processes are met.             |
+| **Contract Acceptance Testing**          | Checks if software meets agreed requirements in the contract. |
+| **Operational Acceptance Testing (OAT)** | Validates deployment, backup, and maintenance readiness.      |
+
+---
+
+### 🧰 Tools
+
+| Purpose            | Tools                    |
+| ------------------ | ------------------------ |
+| UAT Management     | TestLink, Jira, Zephyr   |
+| Automation Support | Selenium, Cucumber (BDD) |
+
+---
+Tools: Selenium, Cucumber (BDD)
+
+### 🎯 Goal
+
+To ensure the **software fulfills business needs**, **works as intended**, and is ready for **production release**.
+
 
 
 
