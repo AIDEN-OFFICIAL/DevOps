@@ -581,7 +581,7 @@ If all works smoothly, the software is **accepted**.
 | ---------------------------------------- | ------------------------------------------------------------- |
 | **User Acceptance Testing (UAT)**        | Done by end-users or clients to verify business flow.Tools: TestLink, Jira, Zephyr     |
 | **Business Acceptance Testing (BAT)**    | Ensures all business goals and processes are met.             |
-| **Contract Acceptance Testing**          | Checks if software meets agreed requirements in the contract. |
+| **Contract Acceptance Testing**          | Checks if software meets the agreed requirements in the contract. |
 | **Operational Acceptance Testing (OAT)** | Validates deployment, backup, and maintenance readiness.      |
 
 ---
