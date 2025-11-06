@@ -600,6 +600,153 @@ Tools: Selenium, Cucumber (BDD)
 
 To ensure the **software fulfills business needs**, **works as intended**, and is ready for **production release**.
 
+---
+# JEST
 
+**Jest** is a JavaScript testing framework created by Facebook.
+It’s mainly used for testing **JavaScript and Node.js** code — including frontend (React) and backend (Express) projects.
 
+✅ Key Features:
+
+* No config needed — works out of the box
+* Built-in test runner, assertion library, and mocking
+* Snapshot testing (for UIs)
+* Fast execution using parallel test runs
+
+---
+
+## ⚙️ Setup Jest in a Node.js Project
+
+```bash
+###  Install Jest
+npm init -y
+npm install --save-dev jest
+```
+
+###  Update your `package.json`
+
+Add this line inside `"scripts"`:
+
+```json
+"scripts": {
+  "test": "jest"
+}
+```
+
+Your `package.json` should now look like this:
+
+```json
+{
+  "name": "jest-demo",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^29.0.0"
+  }
+}
+```
+
+---
+
+## 🧠 Create Your First Function to Test
+
+Inside your project, make a file:
+📁 `sum.js`
+
+```js
+function sum(a, b) {
+  return a + b;
+}
+module.exports = sum;
+```
+
+Then create a test file:
+📁 `sum.test.js`
+
+```js
+const sum = require('./sum');
+
+test('adds 2 + 3 to equal 5', () => {
+  expect(sum(2, 3)).toBe(5);
+});
+```
+
+---
+
+## Run the Test
+```bash
+npm test
+```
+
+✅ Output should be:
+
+```
+PASS  ./sum.test.js
+✓ adds 2 + 3 to equal 5 (5 ms)
+```
+
+That means your first **unit test** passed! 🎉
+
+---
+
+## 🧩 Understanding Jest Syntax
+
+| Keyword                        | Description                           |
+| ------------------------------ | ------------------------------------- |
+| `test()`                       | Defines a single test case            |
+| `expect()`                     | Used for assertions (to check values) |
+| `toBe()`                       | Checks for equality                   |
+| `describe()`                   | Groups related tests together         |
+| `beforeEach()` / `afterEach()` | Setup and cleanup before/after tests  |
+
+---
+
+## 🧪  A Few Common Matchers
+
+```js
+expect(5).toBe(5);                    // strict equality
+expect(obj).toEqual({name: "Aiden"}); // object comparison
+expect(value).toBeNull();
+expect(array).toContain("item");
+expect(fn).toThrow("error message");
+```
+
+---
+
+## 🕒 Testing Async Functions
+
+Example: `fetchData.js`
+
+```js
+async function fetchData() {
+  return "Aiden C Terrence";
+}
+module.exports = fetchData;
+```
+
+Test: `fetchData.test.js`
+
+```js
+const fetchData = require('./fetchData');
+
+test('resolves to Aiden C Terrence', async () => {
+  await expect(fetchData()).resolves.toBe("Aiden C Terrence");
+});
+```
+
+---
+
+## 🧰Mocking (Advanced)
+
+You can mock external dependencies (like APIs) to test behavior without real calls:
+
+```js
+const mockFn = jest.fn();
+mockFn('hello');
+expect(mockFn).toHaveBeenCalledWith('hello');
+```
+
+---
 
