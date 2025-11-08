@@ -749,4 +749,493 @@ expect(mockFn).toHaveBeenCalledWith('hello');
 ```
 
 ---
+Perfect thinking, Aiden 💪 — adding **Vitest** to your toolkit will definitely boost your testing credibility.
+It’s *faster*, *lighter*, and integrates beautifully with modern stacks (especially **Vite**, React, Vue, and Node**).
+
+Here’s your complete **Vitest MD notes**, following exactly the same format and tone as your Jest one 👇
+
+---
+
+# VITEST
+
+**Vitest** is a modern, blazing-fast testing framework built by the creators of **Vite**.
+It’s designed as a drop-in alternative to Jest — but optimized for speed and simplicity.
+
+✅ **Key Features:**
+
+* Lightning-fast startup (powered by Vite)
+* Works seamlessly with ES modules
+* Supports mocking, snapshots, and coverage
+* Jest-compatible syntax (you can reuse Jest tests!)
+* Built-in TypeScript & JSX support
+
+---
+
+## ⚙️ Setup Vitest in a Node.js Project
+
+```bash
+### Initialize project
+npm init -y
+
+### Install Vitest
+npm install --save-dev vitest
+```
+
+### Update your `package.json`
+
+Add this line inside `"scripts"`:
+
+```json
+"scripts": {
+  "test": "vitest"
+}
+```
+
+Your `package.json` should now look like this:
+
+```json
+{
+  "name": "vitest-demo",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "vitest"
+  },
+  "devDependencies": {
+    "vitest": "^2.0.0"
+  }
+}
+```
+
+---
+
+## 🧠 Create Your First Function to Test
+
+Inside your project, make a file:
+📁 `sum.js`
+
+```js
+export function sum(a, b) {
+  return a + b;
+}
+```
+
+Then create a test file:
+📁 `sum.test.js`
+
+```js
+import { test, expect } from 'vitest';
+import { sum } from './sum.js';
+
+test('adds 2 + 3 to equal 5', () => {
+  expect(sum(2, 3)).toBe(5);
+});
+```
+
+---
+
+## ▶️ Run the Test
+
+```bash
+npm test
+```
+
+✅ Output should be:
+
+```
+✓ adds 2 + 3 to equal 5 (2 ms)
+Test Files  1 passed (1)
+      Tests  1 passed (1)
+```
+
+That means your first **Vitest unit test** passed! 🎉
+
+---
+
+## 🧩 Understanding Vitest Syntax
+
+| Keyword                        | Description                       |
+| ------------------------------ | --------------------------------- |
+| `test()` / `it()`              | Defines a single test case        |
+| `expect()`                     | Used for assertions               |
+| `toBe()`                       | Checks equality                   |
+| `describe()`                   | Groups related tests              |
+| `beforeEach()` / `afterEach()` | Setup and cleanup                 |
+| `vi`                           | Vitest’s mocking & spying utility |
+
+---
+
+## 🧪 Common Matchers
+
+```js
+expect(5).toBe(5);
+expect(obj).toEqual({ name: "Aiden" });
+expect(value).toBeTruthy();
+expect(array).toContain("item");
+expect(fn).toThrow("error");
+```
+
+---
+
+## 🕒 Testing Async Functions
+
+📁 `fetchData.js`
+
+```js
+export async function fetchData() {
+  return "Aiden C Terrence";
+}
+```
+
+📁 `fetchData.test.js`
+
+```js
+import { test, expect } from 'vitest';
+import { fetchData } from './fetchData.js';
+
+test('resolves to Aiden C Terrence', async () => {
+  await expect(fetchData()).resolves.toBe("Aiden C Terrence");
+});
+```
+
+---
+
+## 🧰 Mocking Functions
+
+Vitest uses `vi` for mocking — similar to `jest.fn()`:
+
+```js
+import { vi, test, expect } from 'vitest';
+
+test('mock function example', () => {
+  const mockFn = vi.fn();
+  mockFn('hello');
+  expect(mockFn).toHaveBeenCalledWith('hello');
+});
+```
+
+---
+
+## 📸 Snapshot Testing
+
+Vitest also supports snapshots (just like Jest):
+
+```js
+import { test, expect } from 'vitest';
+
+test('matches snapshot', () => {
+  const user = { name: "Aiden", role: "SQA Consultant" };
+  expect(user).toMatchSnapshot();
+});
+```
+
+Run once → creates a `__snapshots__` folder.
+Run again → compares output; use `--update` to update snapshots:
+
+```bash
+npx vitest --update
+```
+
+---
+
+## 🧱 Coverage Report
+
+To see test coverage (like Jest):
+
+```bash
+npm install --save-dev @vitest/coverage-v8
+```
+
+Add this to your `package.json`:
+
+```json
+"scripts": {
+  "test": "vitest run --coverage"
+}
+```
+
+Then run:
+
+```bash
+npm test
+```
+
+✅ You’ll get a full coverage summary in your terminal.
+
+---
+
+## ⚖️ Jest vs Vitest — Quick Comparison
+
+| Feature          | Jest ⚙️                  | Vitest ⚡                 |
+| ---------------- | ------------------------ | ------------------------ |
+| Speed            | Moderate                 | Very fast (Vite-powered) |
+| ESM / TS Support | Limited by setup         | Built-in                 |
+| Snapshot Testing | ✅ Yes                    | ✅ Yes                    |
+| Mocking          | ✅ jest.fn()              | ✅ vi.fn()                |
+| Coverage         | ✅ Built-in               | ✅ Via plugin             |
+| Ecosystem        | Mature, stable           | Modern, lightweight      |
+| Ideal For        | Node, React, Legacy Apps | Vite, Vue, React, Node   |
+
+---
+
+# 🧪 Supertest 
+
+**Supertest** is a **Node.js library** used to test HTTP APIs.
+It allows you to send fake requests (`GET`, `POST`, `PUT`, etc.) to your **Express app** and check the **response** — without actually running the server on a port.
+
+---
+
+### ✅ Why It’s Used
+
+* To test **Express routes** easily
+* Works perfectly with **Jest** or **Mocha** or **Vitest**
+* You can test endpoints like `/register`, `/login`, `/api/products`
+* Helps ensure your **controllers and middleware** work as expected
+
+---
+
+## ⚙️ Setup
+
+```bash
+npm install --save-dev supertest jest
+```
+
+---
+
+## 🧩 Example — Testing an Express API
+
+📁 `app.js`
+
+```js
+const express = require('express');
+const app = express();
+app.use(express.json());
+
+app.get('/hello', (req, res) => {
+  res.status(200).json({ message: 'Hello, Aiden!' });
+});
+
+module.exports = app;
+```
+
+📁 `app.test.js`
+
+```js
+const request = require('supertest');
+const app = require('./app');
+
+describe('GET /hello', () => {
+  test('should return Hello, Aiden!', async () => {
+    const res = await request(app).get('/hello');
+    expect(res.statusCode).toBe(200);
+    expect(res.body.message).toBe('Hello, Aiden!');
+  });
+});
+```
+
+Then run:
+
+```bash
+npm test
+```
+
+✅ Output:
+
+```
+PASS  ./app.test.js
+✓ should return Hello, Aiden! (30 ms)
+```
+
+---
+
+## 🧠 How It Works (In Simple Words)
+
+* `request(app)` → creates a virtual request to your Express app
+* `.get('/hello')` → simulates a GET request
+* `.send()` → sends JSON data for POST/PUT requests
+* `.expect()` or `expect()` → checks status codes or responses
+
+---
+
+## 🧰 Example for POST
+
+```js
+app.post('/login', (req, res) => {
+  if (req.body.username === 'Aiden' && req.body.password === '1234') {
+    res.status(200).json({ success: true });
+  } else {
+    res.status(401).json({ success: false });
+  }
+});
+```
+
+**Test:**
+
+```js
+test('should login successfully', async () => {
+  const res = await request(app)
+    .post('/login')
+    .send({ username: 'Aiden', password: '1234' });
+  
+  expect(res.statusCode).toBe(200);
+  expect(res.body.success).toBe(true);
+});
+```
+---
+# 🧪 React Testing Library (with Vitest)
+
+**React Testing Library (RTL)** helps test React components in a way that focuses on **user behavior** rather than implementation details.
+It simulates how users interact with the UI — clicking buttons, typing, etc.
+We’ll use it along with **Vitest** as the test runner.
+
+---
+
+## ⚙️ Setup
+
+```bash
+# 1️⃣ Create a new project
+npm create vite@latest my-app
+cd my-app
+npm init -y
+
+# 2️⃣ Install dependencies
+npm install -D vitest jsdom
+npm install -D @testing-library/react @testing-library/jsdom @testing-library/user-event @testing-library/jest-dom
+```
+
+---
+
+## 🧰 Vitest UI (Optional)
+
+Vitest also provides a browser-based UI for running tests visually.
+
+### Install UI:
+
+```bash
+npm install -D @vitest/ui
+```
+
+### Run Tests with UI:
+
+```bash
+npx vitest --ui
+```
+---
+
+## 📦 Update `package.json`
+
+```json
+"scripts": {
+  "test": "vitest"
+}
+```
+
+---
+
+## ⚙️ Configure `vite.config.js`
+
+Add this inside your config file:
+
+```js
+test: {
+  environment: 'jsdom',
+  globals: true
+}
+```
+
+🧠 **Why jsdom?**
+`jsdom` simulates a browser-like environment inside Node.js, so React components can be rendered and tested.
+
+---
+
+## 🧩 Basic Syntax
+
+```js
+import { render, screen } from '@testing-library/react';
+import { describe, it, expect } from 'vitest';
+import MyComponent from './MyComponent';
+
+describe("MyComponent", () => {
+  it("renders correctly", () => {
+    render(<MyComponent />);
+    screen.debug(); // prints the entire screen DOM for debugging
+    expect(screen.getByText("Hello Aiden")).toBeInTheDocument();
+  });
+});
+```
+
+---
+
+## 🔍 Query Methods (screen.*)
+
+| Method    | Description                                           | When to Use                            |
+| --------- | ----------------------------------------------------- | -------------------------------------- |
+| `getBy`   | Finds element immediately (throws error if not found) | Element **must exist**                 |
+| `findBy`  | Returns a Promise (waits for element)                 | Element appears **after async action** |
+| `queryBy` | Returns null if not found (no error)                  | To check if element **is not present** |
+
+---
+
+## 🖱️ fireEvent vs userEvent
+
+| Method        | Description                                      | Best For                     |
+| ------------- | ------------------------------------------------ | ---------------------------- |
+| **fireEvent** | Low-level DOM event trigger                      | Simple clicks or key presses |
+| **userEvent** | Simulates real user actions (typing, tabs, etc.) | Realistic user interactions  |
+
+Example:
+
+```js
+import userEvent from '@testing-library/user-event';
+
+userEvent.type(screen.getByPlaceholderText("Name"), "Aiden");
+userEvent.click(screen.getByText("Submit"));
+```
+
+---
+
+## 🧠 Mocking & Wrappers (Redux / Router / Context)
+
+When your component uses **Redux**, **Context**, or **React Router**,
+wrap it inside a **provider** before testing:
+
+```js
+import { Provider } from 'react-redux';
+import { BrowserRouter } from 'react-router-dom';
+
+render(
+  <Provider store={store}>
+    <BrowserRouter>
+      <MyComponent />
+    </BrowserRouter>
+  </Provider>
+);
+```
+
+This ensures your component behaves exactly like it does in the real app.
+
+---
+
+## 🧩 Utilities
+
+| Utility        | Use                                                            |
+| -------------- | -------------------------------------------------------------- |
+| `act()`        | Ensures all updates (state, DOM) are applied before assertions |
+| `waitFor()`    | Waits for async actions (like API updates)                     |
+| `renderHook()` | Tests **custom React hooks** directly                          |
+
+Example:
+
+```js
+import { renderHook } from '@testing-library/react';
+
+const { result } = renderHook(() => useCounter());
+expect(result.current.count).toBe(0);
+```
+
+---
+
+## 💡 VS Code Extensions
+
+* 🧩 **Vitest Snippets** — quick test boilerplates
+* 🧩 **Testing Library Snippets** — faster test writing (`rtl` templates)
 
