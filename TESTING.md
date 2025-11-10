@@ -1239,3 +1239,6 @@ expect(result.current.count).toBe(0);
 * 🧩 **Vitest Snippets** — quick test boilerplates
 * 🧩 **Testing Library Snippets** — faster test writing (`rtl` templates)
 
+---
+# Integration testing
+
