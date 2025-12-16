@@ -85,8 +85,8 @@ the way in which the operating system organizes and stores files and directories
 |`less`|just like `cat` command , but it lazyloads so 1 page at a time|`less file.txt`|
 |`head`|to only see the begining of the file|`head filename.txt` `head -n3 filename` to add numbers of line|
 |`tail`|to only see the end of the file contents|`tail filename.txt`|
-|`cmp`|compare to files contents|`cmp file1.txt file2.txt`|
-|`diff`|to see difference in to file contents if theye have some similarities|`diff file1.txt file2.txt`|
+|`cmp`|compare two files contents|`cmp file1.txt file2.txt`|
+|`diff`|to see difference in two file contents if they have some similarities|`diff file1.txt file2.txt`|
 |`sort`|helps you sort the contents in a file |`cat filetxt (pipe symbol) sort `|
 |`sudo find`|to find or search a file |`sudo find /dir -name 'bible'` `find . -type f -empty` `find /dir -mtime +2` search files that is created before 2 days|
 |`chmod +x`|to execute a file|`chmod +x filename.txt` give read , write and execute permissions , rwx|
