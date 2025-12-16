@@ -1,6 +1,6 @@
  # All about Software Testing
 
-Software testing is the  activity of checking if the actual results match the expected results, and also ensures that the softwaare is defect free. 
+Software testing is the  activity of checking if the actual results match the expected results, and also ensures that the software is defect free. 
 
 Testing makes sure the software does what it should and doesn’t do what it shouldn’t.
 
