@@ -371,7 +371,6 @@ Testing done using **automation tools or scripts** to execute test cases automat
 | **Cost (initial)** | Low                   | High                    |
 | **Maintenance**    | Low                   | High                    |
 
-Here’s a concise and easy-to-copy **Markdown version** with single-paragraph explanations 👇
 
 ---
 
