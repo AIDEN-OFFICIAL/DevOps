@@ -748,12 +748,6 @@ expect(mockFn).toHaveBeenCalledWith('hello');
 ```
 
 ---
-Perfect thinking, Aiden 💪 — adding **Vitest** to your toolkit will definitely boost your testing credibility.
-It’s *faster*, *lighter*, and integrates beautifully with modern stacks (especially **Vite**, React, Vue, and Node**).
-
-Here’s your complete **Vitest MD notes**, following exactly the same format and tone as your Jest one 👇
-
----
 
 # VITEST
 
