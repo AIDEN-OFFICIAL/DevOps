@@ -6,7 +6,7 @@ Reasons :
 - different configurations across different machines
 - suppose think like Docker is a package, and it consists of your applications  nodejs, MongoDB and the whole app with a fixed version
 - docker-compose up: to add an  application into the container (isolated environment, where we can run any number of application versions)
-- We can easily remove any app vversion without causing any issues in one go.
+- We can easily remove any app version without causing any issues in one go.
 - Suppose we have the tension of unknowingly delete any dependencies that we think would be used in one version that we would like to remove, but at the same time we are afraid that it's something that shouldn't be removed. In such a situation Docker helps us sort out the dependencies specific to different versions of apps and remove those
 docker-compose down --rmi all
 - A virtual machine is an abstraction of a machine (physical hardware)
@@ -50,7 +50,7 @@ You can:
 - `docker pull 'image name':'version'` pulling specific versions
 - `docker login` to connect to hub
 - `docker login -u <username>`if the login is not setup
-- `docker push <username>`
+- `docker push <username>`to upload your local Docker image to a remote registry
 ### Docker Tags: Just like versions.
 
 ## Docker commands:
@@ -62,7 +62,7 @@ You can:
 - `docker run -d -e MYSQL_Root_Password=secret mysql` we can also set up -e(enviornment variables while installing and running in detatched mode)
 - `docker run -d --name 'Mysq-newname' mysql:8.0` e can give costum names for each image
 - `docker rmi 'image name` remove one image from the device 
-- `docker rm 'container name` remove any Container from the device 
+- `docker rm 'container name'` remove any Container from the device 
 - `docker run -it ubuntu` run ubuntu in interactive mode.`exit` to come out of interactive mode
 - `docker ps` show all running containers
 - `docker ps -a` status of all images (-a, for all images)
