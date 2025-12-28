@@ -258,3 +258,267 @@ jobs:
 
             echo "✅ Deployment Complete!"
 ```
+
+---
+
+## 🧠 What Is Jenkins?
+
+Jenkins is an **open-source automation server** used to build **custom CI/CD pipelines**.
+
+* Written in **Java**
+* Uses **Groovy-based DSL**
+* Highly extensible via plugins
+* Widely used in **enterprise environments**
+
+---
+
+## 🏗️ Jenkins Architecture
+
+### 🔹 Master–Agent (Master–Slave) Architecture
+
+```text
+Jenkins Master
+ ├── Agent 1 (Build)
+ ├── Agent 2 (Test)
+ └── Agent 3 (Deploy)
+```
+
+### Roles
+
+| Component  | Responsibility                                |
+| ---------- | --------------------------------------------- |
+| **Master** | Schedules jobs, manages UI, controls pipeline |
+| **Agent**  | Executes jobs (build, test, deploy)           |
+
+✔️ Agents can run on:
+
+* Linux / Windows
+* Docker containers
+* Kubernetes pods
+
+---
+
+## 🔐 Jenkins Security & Authentication
+
+Jenkins supports:
+
+* **Role-Based Access Control (RBAC)**
+* **LDAP / Active Directory**
+* **OAuth (GitHub, Google)**
+* **API tokens**
+
+### Credentials Management
+
+* Stored using **Credentials Plugin**
+* Supports:
+
+  * Username/password
+  * SSH keys
+  * Tokens
+  * Secrets
+
+```groovy
+withCredentials([usernamePassword(
+  credentialsId: 'docker-creds',
+  usernameVariable: 'USER',
+  passwordVariable: 'PASS'
+)]) {
+  sh 'docker login -u $USER -p $PASS'
+}
+```
+
+---
+
+## 📜 What Is a Jenkinsfile?
+
+A **Jenkinsfile** defines the CI/CD pipeline **as code**.
+
+* Written in **Groovy**
+* Stored in source control
+* Ensures pipeline versioning
+
+---
+
+## 🧩 Types of Jenkins Pipelines
+
+### 1️⃣ Declarative Pipeline (Recommended)
+
+```groovy
+pipeline {
+  agent any
+  stages {
+    stage('Build') {
+      steps {
+        sh 'npm install'
+      }
+    }
+    stage('Test') {
+      steps {
+        sh 'npm test'
+      }
+    }
+  }
+}
+```
+
+✔️ Simple
+✔️ Structured
+✔️ Preferred in enterprises
+
+---
+
+### 2️⃣ Scripted Pipeline
+
+```groovy
+node {
+  stage('Build') {
+    sh 'npm install'
+  }
+  stage('Test') {
+    sh 'npm test'
+  }
+}
+```
+
+✔️ Flexible
+❌ Harder to maintain
+❌ Less readable
+
+---
+
+## 🧰 Jenkins Build Types
+
+| Build Type      | Description                |
+| --------------- | -------------------------- |
+| **Freestyle**   | UI-based jobs, no code     |
+| **Pipeline**    | Jenkinsfile-based (modern) |
+| **Multibranch** | One pipeline per branch    |
+
+---
+
+## 📂 Copying Jenkins Configuration
+
+Ways to migrate Jenkins:
+
+* Backup `JENKINS_HOME`
+* Copy jobs directory
+* Export/import via plugins
+* Docker volume backup
+
+---
+
+## 🆕 Latest Jenkins Trends (High Level)
+
+* Jenkins on **Kubernetes**
+* Docker-based agents
+* Shift to **GitHub Actions** for simpler pipelines
+* Jenkins mainly for **complex enterprise workflows**
+
+---
+
+# ⚙️ GitHub Actions
+
+## 🧠 What Is GitHub Actions?
+
+GitHub Actions is a **CI/CD platform built into GitHub**.
+
+* YAML-based
+* No server management
+* Event-driven
+* Faster setup than Jenkins
+
+---
+
+## 🧩 GitHub Actions Concepts
+
+| Concept  | Description           |
+| -------- | --------------------- |
+| Workflow | YAML pipeline         |
+| Job      | Group of steps        |
+| Step     | Individual action     |
+| Runner   | VM that executes jobs |
+
+---
+
+## 🧾 YAML Syntax (Core Concepts)
+
+```yaml
+name: CI Pipeline
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: npm install
+      - run: npm test
+```
+
+---
+
+## 🔁 Jenkins vs GitHub Actions
+
+| Feature     | Jenkins            | GitHub Actions    |
+| ----------- | ------------------ | ----------------- |
+| Setup       | Manual             | Built-in          |
+| Language    | Groovy             | YAML              |
+| Maintenance | High               | Low               |
+| Plugins     | Huge ecosystem     | Marketplace       |
+| Best for    | Complex enterprise | Modern cloud apps |
+
+---
+
+# 🧪 Build Tools: Maven vs Docker
+
+| Tool       | Purpose                      |
+| ---------- | ---------------------------- |
+| **Maven**  | Builds Java apps (JAR/WAR)   |
+| **Docker** | Builds deployable containers |
+
+✔️ Modern CI/CD often uses **both**:
+
+* Maven → build app
+* Docker → package app
+
+---
+
+## 🐳 Tomcat vs Docker
+
+* **Tomcat** → Java application server
+* **Docker** → Container runtime
+
+✔️ Docker can **replace Tomcat deployment**
+✔️ Docker is cloud-native and portable
+
+---
+
+# 🧠 How to Approach a DevOps Project (Interview Answer)
+
+1. Understand application architecture
+2. Identify build & test requirements
+3. Containerize application
+4. Create CI pipeline
+5. Add automated testing
+6. Push artifacts to registry
+7. Implement CD with rollback
+8. Monitor & optimize
+
+---
+
+## 🎯 Interview-Ready Answers
+
+### Explain CI/CD in your project
+
+> “We used CI to automatically build, test, and scan code on every commit. After successful CI, CD pipelines built Docker images, pushed them to a registry, and deployed them to staging and production environments.”
+
+---
+
+### When to use Jenkins vs GitHub Actions?
+
+> “Jenkins is suitable for complex enterprise workflows, while GitHub Actions is preferred for cloud-native, GitHub-centric projects.”
+
+---
