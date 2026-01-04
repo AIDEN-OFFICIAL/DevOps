@@ -176,6 +176,57 @@ What I want to learn next is how to take my development background into enterpri
 
 16. What do you like to do outside of work or studies?  
 
-i like helping others , i help my family for delivery and stuff as she is a home baker so there is a lot of deliverys and inventory refil runs that i have to go for , its for my family to sustain , and i really worked so hard for my family , and in terms of other i like to help my friends and colleuges solve problems , sometimes guiing them to the right path, i like charity and helping others , i also wanted to be a good role model as i told there is lot of chidren looking up to me , i want to do somting for them to grow , along side me , and currntly i have plans for an  initiative its actually a solution i found using tech and my business logivc , which could help lots of students learn antyhing that they want , its a cutally a self learning platfrom whree they will be provided cources and mentors and interviwers to help them crack or learn any subjects so im planning this platform as a low cost model , so that it is easily scalbale ,
+“Outside of work and studies, I spend time helping others. I actively support my family by helping with deliveries and inventory runs for our home-baking business, which has taught me responsibility and consistency. I also enjoy helping friends and colleagues solve problems and guiding them in the right direction.
 
-I like playing games , both indoor and out door ,  football  because its a strategic game and it requires lots of skills , like fast thinking , problem solving , critical thinking , quick descions making  ,team work , actually its a game if team work , but we have to also make individual efforts to move towards goal , so doing our part is important  , i would like to be the midfielder who controls the game , and works as an engine that provides passes that leads to goal , defends our territory and be the heart of the team , if i fail the team fails so it also means responsibility . so this is why i like playing football . apart from football i like playing chess , cause its more strategic and challenging , i think im pretty good at this , and i like video games as well , to be entertained and be more flexible and fast ,aprt from that i like movies , cause its like a whole book made short , i ike movies more than books cause its like we are watching through the directors perspective. so this is other thinfs outsode of studies.
+I’m passionate about giving back, and I’m currently planning on a low-cost, tech-enabled learning platform to help students learn skills with access to mentors, interview guidance, and placement assistance. It reflects my interest in combining technology with social impact.
+
+In my personal time, I enjoy playing football and chess. Football helps me build teamwork and quick decision-making. I enjoy playing the midfield position because it requires both leadership and responsibility. Chess sharpens my strategic thinking. I also enjoy movies and games, which help me relax and stay creative.”
+
+----------------------------------
+
+17. How do you stay updated with new technologies and industry trends?  
+
+
+“I stay updated through a mix of curated digital content and direct industry exposure. I follow tech news and intentionally use social media in a productive way by training my feed to focus on tech related content, which helps me stay current without wasting time.
+
+I also regularly watch podcasts and talks by experienced professionals, CEOs, and engineering leaders to understand real-world trends and decision-making. Additionally, through Brototype, I attend industry interaction sessions where IT leaders and professionals share insights and answer questions directly. This combination helps me stay both technically updated and industry-aware.”
+
+---------------------------------
+------------------------------------------------------------------
+---------------------------------
+# 🟧 3. Behavioral / STAR-Method Questions
+
+18. Describe a situation where you were given performance feedback. What did you do next?  
+
+Situation: During my training, I receive weekly performance feedback from experienced industry professionals. In my third week of DSA, I struggled with a timed assessment that included a hash-map–based problem i dont remember which it was, and I couldn’t solve it because I was new to LeetCode style  DSA questions.
+
+Task: The feedback highlighted that my fundamentals were good, but I needed more problem-solving exposure and speed under pressure. I had to close that gap quickly.
+
+Action: So I took the feedback seriously and changed my approach. I started practising  LeetCode consistently, focusing on core DSA patterns from Blind 75. I analyzed my mistakes, revised concepts, and practised DSA problems to build confidence.
+
+Result: When I faced the next assessment, I solved similar problems successfully and completed the week. More importantly, the experience taught me how to accept feedback, act on it quickly, and turn a failure into measurable improvement, which is how I continue to grow today.
+----------------------------------
+
+19. Describe a time when you had to make a difficult decision.  
+
+while I was enrolled as a MERN stack student at Brototype.
+Last month, I was under some financial pressure at home and needed to support my family. At the same time, I noticed strong market demand and openings for DevOps and SQA roles.
+
+Task: So, I had to make a difficult decision—either continue without change or take a risk that could delay my progress but better align with my long-term career goals.
+
+Action: After thinking for nearly a week, I decided to take a temporary three-month break from the program. During this time, I focused fully on learning DevOps and SQA fundamentals, understanding how they work at an enterprise level. I planned my time carefully to make the most of the break.
+
+Result: Although it was a risky decision, it helped me build clarity and relevant skills aligned with my career. Today, I’m confident in my foundation and proud that I took a well-thought-out risk to grow, rather than staying in my comfort zone.
+
+----------------------------------
+20. Tell me about a time you had to work with a difficult person.  
+
+Situation: During my BCA group project, one teammate preferred working alone and didn’t communicate much, which made collaboration difficult.
+
+Task: I needed to make sure the project stayed collaborative and that everyone, including me, could contribute effectively.
+
+Action: I addressed the issue directly by sharing my concerns and asking for better coordination. This helped align responsibilities and improve communication.
+
+Result: The team worked smoothly after that, completed the project successfully, and I learned that speaking up early is key to handling difficult working relationships.
+----------------------------------
+
