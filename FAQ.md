@@ -1,11 +1,11 @@
-TELL ME ABOUT YOURSELF?INTRODUCE YOURSELF?
+1.TELL ME ABOUT YOURSELF?INTRODUCE YOURSELF?
 
 "sure, thank you for asking. I'm Aiden C.T., a recent BCA graduate and self-directed Full Stack Developer specialising in the MERN stack, which includes mongoDB, Express, Nodejs, React and JavaScript. I also have expertise in TypeScript and AWS deployment.
 
 My strength lies in building and solving real-world problems with code while ensuring efficiency. For example, in a real-world project, I successfully reduced backend errors by 40% and improved scalability by 30% using robust error-handling, TypeScript, and Docker.
 
-To further ensure solution reliability—which is critical in consulting—I’m currently focused on mastering DevOps and QA Automation tools like Docker,Playwright and Jenkins, proving my adaptability and continuous learning drive.
-
+To further ensure solution reliability which is critical in consulting—I’m currently focused on mastering DevOps and QA Automation tools like Docker,Playwright and Jenkins, proving my adaptability and continuous learning drive.
+ 
 I'm focused on the Associate Consultant role at KPMG because I want to leverage my technical foundation to collaborate with your Advisory teams, transitioning from building individual projects to delivering strategic, reliable technical solutions for your enterprise clients. I believe my proven ability to thrive in demanding environments, like the highly challenging BrotoType program, positions me to contribute quickly and grow within KPMG."
 
 
@@ -20,7 +20,7 @@ It is structured as a self-learning platform where we are required to master an 
 how did you reduce the backend errors and improved scalability?
 
 ----------------------------------
-Why KPMG? what do you know about KPMG?
+2.Why KPMG? what do you know about KPMG?
 
 "I want to join KPMG because I’m looking for a firm where technology-enabled advisory isn't just a service, but a core strategy. Having researched KPMG India’s growth since 1993, I’m particularly impressed by your focus on Digital Transformation and the KPMG Ignition Centers. As someone who is currently mastering DevOps and SQA, seeing a Big Four firm prioritize cloud-native innovation and automation labs shows me that my skills can be applied in a meaningful, client-impacting way.
 
@@ -157,8 +157,7 @@ These are the most productive habits which I recall.
 
 14. State the difference between hard work and smart work.  
 
-Hard work gets the job done, but smart work ensures it’s done in the most efficient, scalable, and high-quality way possible for the client. I believe in working hard on the right things.
-
+Hard work gets the job done, but smart work ensures it’s done in the most efficient, scalable, and high-quality way possible for the client. I believe I have to balance both.
 Hard Work is the foundation of grit and volume. It’s the 13 hours a day I spend studying and the consistency of solving 250+ problems to build technical stamina. It’s about doing the work that cannot be bypassed.
 
 Smart Work is about efficiency and strategy. It’s using AI as an assistant to break down tasks, using Jira to prioritize my sprint, and mastering DevOps/SQA to automate manual processes.
@@ -189,7 +188,7 @@ In my personal time, I enjoy playing football and chess. Football helps me build
 
 “I stay updated through a mix of curated digital content and direct industry exposure. I follow tech news and intentionally use social media in a productive way by training my feed to focus on tech related content, which helps me stay current without wasting time.
 
-I also regularly watch podcasts and talks by experienced professionals, CEOs, and engineering leaders to understand real-world trends and decision-making. Additionally, through Brototype, I attend industry interaction sessions where IT leaders and professionals share insights and answer questions directly. This combination helps me stay both technically updated and industry-aware.”
+I also regularly watch podcasts and talks by experienced professionals, CEOs, and engineering leaders to understand real-world trends and decision-making. Additionally, through Brototype, I attend industry interaction sessions where IT leaders and professionals share insights and answer our questions directly. This combination helps me stay both technically updated and industry-aware.”
 
 ---------------------------------
 ------------------------------------------------------------------
@@ -239,10 +238,10 @@ Instead of just arguing, I quickly built a small prototype showing how fast Fire
 
 22. Tell me about a time you had to take ownership or lead a project.  
 
-During The ADHD hackathon , we had a time fram of 4 hours to complete or find solutions for our selected problem statement. so i had to step in to divide my own team with different tasks for each of our team mates , for that i first tried to make an understanding about their skills , what are they good at  and at the end of the presentation we successfully delivered 3 solution for our problem statement , amoung which one is live and running. and 2 others are still in development.
+During The ADHD hackathon , we had a time frame of 4 hours to complete or find solutions for our selected problem statement. so i had to step in to divide my own team with different tasks for each of our team mates , for that i first tried to make an understanding about their skills , what are they good at  and at the end of the presentation we successfully delivered 3 solution for our problem statement , amoung which one is live and running. and 2 others are still in development.
 ----------------------------------
 23. Describe your most successful teamwork experience.  
-The Answer: "My most successful teamwork experience was that same ADHD Hackathon. We were a team of three with very different skills. While I focused on the logical architecture and backend, my teammates focused on the UI/UX and the research on ADHD triggers.
+The Answer: "My most successful teamwork experience was that same ADHD Hackathon. We were a team of five with very different skills. While I focused on the logical architecture and backend, my teammates focused on the UI/UX and the research on ADHD triggers.
 
 What made us successful was our constant communication. Every few hours, we checked in to see if the UI matched the Backend capabilities. When one teammate struggled with the API integration, I stepped in to help, and they helped me refine the user flow. Because we worked 'Together' and respected each other's expertise, we built an app that actually helped people. It was the first time I felt the power of a truly synchronized team."
 ----------------------------------
@@ -255,6 +254,7 @@ By mid-week, I realized I was behind schedule and wouldn't meet the deadline. I 
 ----------------------------------
 
 25. Tell me about a time you made a mistake. What did you learn?  
+
 "During the ADHD Hackathon, I pushed a feature to the main branch without testing it first because I was rushing to meet the deadline. This broke the build right before our progress check.
 
 I took full ownership and fixed the bug immediately, but that moment was a turning point for me. I realized that Excellence is about reliability, not just speed. This mistake is actually what sparked my passion for SQA and DevOps—I learned that 'hoping it works' is not a strategy. Now, I am obsessed with testing and automation to ensure that the code I deliver is always enterprise-ready."
@@ -262,9 +262,9 @@ I took full ownership and fixed the bug immediately, but that moment was a turni
 ----------------------------------
 26. Describe a time you faced a major setback and how you handled it.  
 
-"My major setback happened during my first full-stack project. I was so focused on the 'core' features and deployment on AWS that I neglected the smaller details like pagination and edge-case testing. I failed my first two reviews because of bugs in the payment flow and missing features.
+"My major setback happened during my first full-stack project. I was so focused on the 'core' features and deployment on AWS but I neglected the smaller details like pagination and edge-case testing. I failed my first two reviews because of bugs in the payment flow and missing features.
 
-It was a tough moment, but I handled it by systematically breaking down the feedback. I stayed back, manually tested every route, and refined my Nginx and hosting configurations. On my third attempt, I passed with a high score. This setback was actually a blessing; it taught me the importance of the Software Testing Life Cycle (STLC) and is exactly why I am now so dedicated to pursuing SQA and DevOps."
+It was a tough moment, but I handled it by systematically breaking down the feedback. I stayed back, manually tested every route, and refined my Nginx and hosting configurations. On my third attempt, I passed with a high score. This setback was actually a blessing; it taught me the importance of the Software Testing Life Cycle (STLC) and it is exactly why I am so dedicated to pursuing SQA and DevOps."
 
 ----------------------------------
 27. Describe a time when you had limited resources but still delivered a result.  
@@ -274,7 +274,7 @@ It was a tough moment, but I handled it by systematically breaking down the feed
 Instead of stopping, I researched alternative hosting solutions and chose Render. Because the free tier had limited RAM and CPU, I had to optimize my code—improving my MERN stack efficiency and minimizing middleware—to ensure the app stayed fast and responsive. By being resourceful and optimizing my existing code, I successfully hosted the project with zero budget while maintaining a professional user experience. This taught me that innovation is often born from necessity."
 
 ----------------------------------
-28. Time when you felt bored or unmotivated—how did you make the job interesting?  
+28. Time when you felt bored or unmotivated  how did you make the job interesting?  
 
 "During the sixth week of my program, I faced a highly repetitive study cycle for a rigorous MERN stack assessment. Having already covered the material once, I found it difficult to stay engaged with the same documentation and theory.
 
@@ -311,7 +311,7 @@ nil
 ----------------------------------
 33. Talk about a time you managed multiple tasks to meet a strict deadline.  
 
-"During the final week of my MERN stack project, I had to manage three critical tracks: configuring AWS deployment, fixing final bugs, and preparing my technical presentation.
+"During the final week of my MERN stack project, I had to manage three critical tasks: configuring AWS deployment, fixing final bugs, and preparing my technical presentation.
 
 Initially, I was overwhelmed because I was juggling information across Notion pages, physical notepads, and sticky notes. I realized my lack of a central system was slowing me down. I took a 'time-out' to consolidate everything into a single, prioritized checklist. I broke my day into three blocks: 'Hosting' in the morning, 'Debugging' in the afternoon, and Focus on the theory at night. By centralizing my tasks and following the pomodoro technique in a disciplined schedule, I met every deadline. This experience taught me the value of centralized task management and eventually led me to adopt the Agile and Scrum methodologies that I use today."
 
@@ -383,7 +383,7 @@ Ultimately, integrity is about transparency. It’s about ensuring that my teamm
 
 "To me, courage isn't just about taking risks in code; it’s about making the right decision when the stakes are highest. My greatest act of courage was the decision to take a career break to support my family during a critical time.
 
-It was a tough, emotional decision because I knew that stepping away from my momentum meant I would eventually have to fight twice as hard to get back in. I am still living with the weight of that choice today, knowing that I am the one responsible for making this next chapter work.
+It was a tough, emotional decision because I knew that stepping away  from my momentum meant I would eventually have to fight twice as hard to get back in. I am still living with the weight of that choice today, knowing that I am the one responsible for making this next chapter work.
 
 However, I chose my family over my immediate comfort, and that experience gave me a level of resilience and maturity that I didn't have before. It taught me that being a 'man of my word' applies to my family as much as my career. I am here today because I had the courage to step back, and I now have the clarity and drive to give my absolute best to this role."
 
@@ -404,7 +404,7 @@ In my work, excellence means writing code that isn't just 'functional,' but is c
 
 43. Tell me about a situation where you worked “For Better” — created a positive impact. 
 
-"I believe that the greatest impact technology can have is in providing free education. My 'For Better' initiative is a platform  calle  Learn with mentors, I’ve designed to provide high-end IT skills to students who have the talent but lack the financial means or infrastructure.
+"I believe that the greatest impact technology can have is in providing free education. My 'For Better' initiative is a platform  called  Learn with mentors, I’ve designed to provide high-end IT skills to students who have the talent but lack the financial means or infrastructure.
 
 I’ve moved this project from a vision to a completed UI design and roadmap phase. The platform isn't just a video library; it’s a gamified ecosystem with leaderboards, mentorship, and a rigorous weekly assessment model where students must pass 1-hour live interviews to progress. I’ve already connected with like-minded mentors willing to offer their expertise for free. My goal is to remove the 'wealth barrier' from tech education, ensuring that any student, regardless of their background, has a clear path to a career. This project is my commitment to using my skills for a lasting social impact."
 
@@ -420,7 +420,7 @@ I demonstrated this when I made the tough decision to take a career break for my
 
 "My greatest accomplishment has been successfully teaching myself the MERN stack from scratch while maintaining a rigorous 13-hour daily study schedule.
 
-Coming from a BCA background, I chose to tackle the most complex subjects like MERN stack and Backend Architecture. During this time, I managed to build a full-stack application and even completed 250+ eetcode questions . What makes this my proudest achievement isn't just the code; it’s the discipline and resilience I developed. I proved to myself that I could balance personal family responsibilities with high-level technical growth, and that I have the grit required to excel in any high-pressure environment."
+Coming from a BCA background, I chose to tackle the most complex subjects like MERN stack and Backend Architecture. During this time, I managed to build a full-stack application and even completed 250+ leetcode questions . What makes this my proudest achievement isn't just the code; it’s the discipline and resilience I developed. I proved to myself that I could balance personal family responsibilities with high-level technical growth, and that I have the grit required to excel in any high-pressure environment."
 
 ----------------------------------
 
