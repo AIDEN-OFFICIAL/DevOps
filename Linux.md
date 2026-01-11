@@ -9,7 +9,7 @@ Linux is the foundational operating system for almost all servers and cloud envi
 
 ## Linux Architecture Components
 Kernel, System Libraries, User Space, Shell, System Utilities, Daemons, and Configuration files.
-- Kernel: Central part of Linux OS. Provide Interface between the user and computer harware
+- Kernel: Central part of Linux OS. Provide Interface between the user and computer hardware
 - System libraries: System libraries are **collections of pre-written code** that provides common functions for other programs to use.
 - User Space: refers to the programs and apps that run on top of the OS
 - Shell: CLI that allows user to interact with the Linux OS
