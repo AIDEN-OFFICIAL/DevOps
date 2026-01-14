@@ -516,9 +516,6 @@ This verifies that your **backend modules integrate properly**.
 To ensure that **modules interact correctly**, **data passes smoothly**, and the system behaves as a whole.
 
 ---
-Here’s a clean, concise note on **System Testing**, perfectly aligned with your roadmap 👇
-
----
 
 # 🖥️ System Testing (Level 3 of Software Testing)
 Tested by: Testers
