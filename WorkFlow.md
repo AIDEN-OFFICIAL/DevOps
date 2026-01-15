@@ -1,11 +1,3 @@
-Got it.
-This time I’ll do it **one last time**, **from zero → production**, **step-by-step**, with **clear “DO / DON’T” comments**, **why each file exists**, and **exact order**.
-No jumping. No repetition. No confusion.
-
-You can save this as **`cicd-full-flow.md`**.
-
----
-
 # 🚀 Complete CI/CD Flow (Zero → Production)
 
 **Clear Order • What to Use • What NOT to Use**
