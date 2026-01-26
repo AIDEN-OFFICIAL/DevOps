@@ -143,6 +143,8 @@ Globally distributed hardware and data centers are physically networked together
 * **High Elasticity:** Ability to *automatically* scale based on demand (ASG).
 * **Highly Fault Tolerant:** Preventing the chance of failure (RDS Multi-AZ).
 * **High Durability:** Ability to recover from disaster and prevent data loss.
+* **Security:** Integrated into planning (IAM, Encryption).
+
 
 ### Recovery Objectives
 
@@ -173,22 +175,13 @@ Scalability, cost optimization, reliability, and  faster time to market. Organiz
 In the AWS shared responsibility model, AWS is responsible for the security of the cloud, such as the physical data centers and infrastructure. While customers are responsible for the security in the cloud, including access control, data protection, and application security.
 
 ### 5. How does AWS ensure reliability?
+AWS ensures reliability through its global infrastructure of regions and availability zones, along with services that support redundancy, fault tolerance and automated scaling.
 
-AWS ensure reliability through its global infrastructure of regions and availability zones along with services that support redundancy, fault tolerance and automated scaling.
 ---
 ## Consultants' Quote:
-
 Technology decisions should align with business goals, risk appetite, and scalability requirements.
+
 ---
-## Architecture Principles & Patterns
-
-### 5 Core Principles
-
-1. **Scalability:** Horizontal and Vertical.
-2. **High Availability:** Multiple AZs and redundancy.
-3. **Fault Tolerance:** Recovery without downtime.
-4. **Security:** Integrated into planning (IAM, Encryption).
-5. **Cost Optimization:** pay-as-you-go, Right-sizing and Auto Scaling.
 
 ### Patterns
 
@@ -221,8 +214,3 @@ The process of moving digital assets, like data, applications, and IT resources,
 ---
 
 ## Interview Questions & Strategy
-
-* **Cloud Transformation:** Redesigning systems and processes to leverage automation and managed services.
-* **DevOps Role:** Enables transformation through automation and CI/CD pipelines.
-* **Assessment:** Start by understanding business objectives and auditing workloads for criticality and security.
-
