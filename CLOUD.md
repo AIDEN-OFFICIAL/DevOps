@@ -41,43 +41,49 @@ AWS is the leading public cloud provider, offering a broad set of compute, stora
 ## Deployment Models
 
 * **Public Cloud (Cloud First):** Workloads run entirely on a cloud provider.
-* *Path:* Internet → AWS → VPC → Public Subnet
-* *Example:* Dropbox
+
+ *Path:* Internet → AWS → VPC → Public Subnet
+ 
+ *Example:* Dropbox
 
 
 * **Private Cloud:** Everything built on on-premise data centers.
-* *Path:* Internet → On-premise Data Center → OpenStack → Public Subnet
-* *Example:* Canada, AIG
+
+  *Path:* Internet → On-premise Data Center → OpenStack → Public Subnet
+
+  *Example:* Canada, AIG
 
 
 * **Hybrid Cloud:** Combination of both public and private cloud, using both on-premise data centers and CSP.
-* *Example:* Deloitte, KPMG
+
+  *Example:* Deloitte, KPMG
 
 
 * **Cross Cloud or Multi-Cloud:** Using multiple Cloud Providers (Azure Arc, Anthos of GCP, etc.).
-* *Example:* KPMG
+
+  *Example:* KPMG
 
 
 
 > **Case Study: KPMG**
 > * KPMG has adopted a **Hybrid Multi-Cloud** deployment model as its primary cloud strategy.
-> * Relies heavily on **Microsoft Azure** (KPMG Clara, Microsoft 365) and **Google Cloud** (AI-driven solutions).
-> * The hybrid structure allows control over sensitive data in regulated environments while accessing public cloud scalability.
-> 
+> * Relies heavily on **Microsoft Azure** (KPMG Clara -smart audit platform, Microsoft 365) and **Google Cloud** (AI-driven solutions).
+> * The hybrid structure allows control over sensitive data in regulated environments while accessing the scalability of public clouds.
 > 
 
----
+
+--- 
 
 ## Key Management & Monitoring Tools
 
-* **IAM (Identity and Access Management):** Controls authentication and authorization, ensuring least-privilege access.
+* **IAM (Identity and Access Management):** Controls authentication and authorization, ensuring least-privilege access to cloud resources.
 * **CloudWatch:** Provides monitoring and observability by collecting metrics, logs, and events to track performance and cost.
 
 ---
 
 ## AWS Pricing Model
 
-AWS follows a **pay-as-you-go** pricing model:
+AWS follows a **pay-as-you-go** pricing model:where customers pay only for the resources they use.
 
 * Convert Capital Expense (CapEx) into Operational Expense (OpEx).
 * Scale up during peak demand; scale down when not needed.
@@ -104,7 +110,7 @@ AWS follows a **pay-as-you-go** pricing model:
 
 ## AWS Global Infrastructure
 
-Globally distributed hardware and datacenters physically networked together. Key terms: **Region, Availability Zones, Fault Tolerance, Fault Domain.**
+Globally distributed hardware and data centers are physically networked together. Key terms: **Region, Availability Zones, Fault Tolerance, Fault Domain.**
 
 ### Connectivity & Delivery Services
 
@@ -149,11 +155,12 @@ Globally distributed hardware and datacenters physically networked together. Key
 
 ### 1. What is Cloud Computing?
 
-The on-demand delivery of computing resources (servers, storage, etc.) over the internet with pay-as-you-go pricing.
+Cloud computing is the on-demand delivery of  computing resources like servers, storage, databases, and networking over the internet, with a pay-as-you-go pricing model. This helps organizations scale up quickly, reduce infrastructure costs, and focus more on the business values rather than managing hardware.
+
 
 ### 2. Why move to the cloud?
 
-Scalability, cost optimization, reliability, and faster time to market.
+Scalability, cost optimization, reliability, and  faster time to market. Organizations adopt cloud to scale resources based on demand, reduce upfront infrastructure costs, and focus more on the business value rather than managing hardware.
 
 ### 3. IaaS vs. PaaS vs. SaaS
 
@@ -163,11 +170,16 @@ Scalability, cost optimization, reliability, and faster time to market.
 
 ### 4. What is the Shared Responsibility Model?
 
-* **AWS:** Security **OF** the cloud (physical infrastructure).
-* **Customer:** Security **IN** the cloud (data, IAM, applications).
+In the AWS shared responsibility model, AWS is responsible for the security of the cloud, such as the physical data centers and infrastructure. While customers are responsible for the security in the cloud, including access control, data protection, and application security.
 
+### 5. How does AWS ensure reliability?
+
+AWS ensure reliability through its global infrastructure of regions and availability zones along with services that support redundancy, fault tolerance and automated scaling.
 ---
+## Consultants' Quote:
 
+Technology decisions should align with business goals, risk appetite, and scalability requirements.
+---
 ## Architecture Principles & Patterns
 
 ### 5 Core Principles
@@ -176,19 +188,21 @@ Scalability, cost optimization, reliability, and faster time to market.
 2. **High Availability:** Multiple AZs and redundancy.
 3. **Fault Tolerance:** Recovery without downtime.
 4. **Security:** Integrated into planning (IAM, Encryption).
-5. **Cost Optimization:** Right-sizing and Auto Scaling.
+5. **Cost Optimization:** pay-as-you-go, Right-sizing and Auto Scaling.
 
 ### Patterns
 
-* **Stateless Architecture:** Servers don't store user state (improves scalability).
-* **Redundancy:** Multiple copies of critical components.
-* **Loose Coupling:** Components are independent to improve resilience.
+* **Stateless Architecture:** Applications do not store user state on the servers.
+ (improves scalability).
+* **Redundancy:** multiple copies of critical components. High availability, disaster recovery.
+* **Loose Coupling:** Components are independent and communicate through well-defined interfaces. Easier changes, Better resilience.
+
 
 ---
 
 ## Cloud Migration
 
-Moving digital assets from on-premise or another cloud to AWS for better scalability and performance.
+The process of moving digital assets, like data, applications, and IT resources, from on-premises servers or one cloud to another cloud environment (like AWS, Azure, or Google Cloud) to leverage benefits such as better scalability, cost-optimization, and performance
 
 ### The 6 Migration Methods (6 R's)
 
@@ -196,12 +210,12 @@ Moving digital assets from on-premise or another cloud to AWS for better scalabi
 2. **Replatform:** Minor optimizations.
 3. **Refactor:** Redesign for cloud.
 4. **Repurchase:** Move to SaaS.
-5. **Retain:** Keep on-premise.
+5. **Retain:** keep certain applications on-premises.
 6. **Retire:** Remove unused apps.
 
 ### Design Levels
 
-* **HLD (High-Level Design):** Overall system, tools, and databases.
+* **HLD (High-Level Design):** overall system design, scalability, which tools/technologies, and databases to use.
 * **LLD (Low-Level Design):** Detailed component behavior, APIs, and algorithms.
 
 ---
