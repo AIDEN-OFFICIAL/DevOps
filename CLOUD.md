@@ -214,3 +214,25 @@ The process of moving digital assets, like data, applications, and IT resources,
 ---
 
 ## Interview Questions & Strategy
+### 1. What is Cloud Transformation?
+Cloud transformation is not just about moving applications to the cloud; it's about redesigning systems, processes, and operating modules to leverage the cloud capabilities, such as scalability, automation, and managed Services
+
+### 2. How would you approach a cloud transformation project?
+I would start by understanding the business objectives and the current state of the applications. Then I would assess the workloads based on the criticality, costs, security, and compliance requirements. Based on this, I would define a target cloud  architecture and select an appropriate migration strategy, followed by phased migration and continuous optimization
+
+### 3. What factors do you consider before migrating to the cloud?
+The Key factors I consider are application dependencies, data sensitivity, compliance requirements, scalability needs, cost implications, and Operational readiness of the team.
+
+### 4. How does DevOps support cloud transformation?
+DevOps enables cloud transformation by automating application deployments, improving collaboration between the development and operations  team, and faster and more reliable releases through  CI/CD pipelines.
+
+### 5. How do you ensure security in a cloud environment?
+Security in the cloud is ensured through identity and access management, network isolation, encryption, and following the shared responsibility model.
+
+### 6. What challenges do organizations face when they are moving to the cloud?
+The most common challenges include skill gaps, security and compliance requirements, cost management, application complexity, and change management
+
+### 7. How do you balance cost, security, and performance in cloud?
+Balancing cost, security, and performance requires following least privilege, auto scaling, right-sizing, and continuously monitoring workloads to optimize usage
+
+### 8. 
