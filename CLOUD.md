@@ -249,3 +249,6 @@ I would evaluate the client’s existing technology stack, compliance requiremen
 
 ###  12. Why choose a hybrid cloud?
 Hybrid cloud is chosen when organizations need to keep sensitive or regulated data on-premises while still leveraging the scalability and flexibility of public cloud services.
+
+### 13. How would you migrate a non-critical internal application to the cloud?
+I would start by understanding the business objectives and the current application state. Since it is a non-critical internal application, I would assess it based on criticality, security, cost, and compliance, and recommend a simple migration strategy such as rehost or replatform. I would then migrate in phases and continuously monitor and optimize.
