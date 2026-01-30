@@ -235,4 +235,17 @@ The most common challenges include skill gaps, security and compliance requireme
 ### 7. How do you balance cost, security, and performance in cloud?
 Balancing cost, security, and performance requires following least privilege, auto scaling, right-sizing, and continuously monitoring workloads to optimize usage
 
-### 8. 
+### 8. What is your role as an Associate Consultant in a cloud project?
+As an associate consultant, my role is to support senior consultants with analyzing requirements, documenting architectures, assisting in solution designing, supporting implementation, and continuously learning best practices.
+
+### 9. A client is concerned about security in the cloud. How would you address this?
+I would explain the shared responsibility model and highlight how cloud service providers ensure infrastructure security while the company is responsible for access control, encryption, and monitoring. I would emphasize the best practices such as IAM, Network isolation, and continuous monitoring.
+
+### 10. A client complains about increased cloud costs after migration. What would you do?
+I would analyze resource utilization, identify over-provisioned resources, and recommend right-sizing and auto-scaling. I would also review usage patterns and implement cost monitoring to improve cost efficiency.
+
+### 11. How would you help a client choose between AWS, Azure, or GCP?
+I would evaluate the client’s existing technology stack, compliance requirements, integration needs, and long-term business goals. The choice of cloud provider should align with these factors rather than just technical features.
+
+###  12. Why choose a hybrid cloud?
+Hybrid cloud is chosen when organizations need to keep sensitive or regulated data on-premises while still leveraging the scalability and flexibility of public cloud services.
