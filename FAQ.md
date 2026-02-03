@@ -117,7 +117,7 @@ Resilience and Perseverance: I have a 'never-give-up' mindset. For example, I pu
 
 Fast Learning and Adaptability: I am a highly proactive self-learner. Even though my background is in development, I recognized the market need for quality and infrastructure, so I quickly mastered the fundamentals of DevOps and SQA. This flexibility allows me to adapt to any role or technology the client requires.
 
-Hard Work with a Purpose: I don't just work hard; I work smart to deliver Excellence. Whether it’s refining a CI/CD pipeline or building a MERN application, my focus is always on the final product.
+Hard Work with a Purpose: I don't just work hard; I work smart to deliver Excellence. I work with a constant craving to refine my skills, ultimately all that matters is the final result.
 
 In short, I am a flexible, fast-Learning, and positive professional who is always looking for the next challenge to master."
 
