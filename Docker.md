@@ -69,7 +69,7 @@ You can:
 #### run command always creates a new container, whereas there are start and stop commands to execute existing containers.
 - `docker start 'name or Id'`to start a Docker container
 - `docker stop 'name or Id'`to stop a Docker container
-- `docker run -d -e 'setup env' -p8080:3360 mysql` so the default port is 3360, which is binded  with the 8080 so the mysql will run on this port container
+- `docker run -d -e 'setup env' -p8080:3306 mysql` so the default port is 3360, which is binded  with the 8080 so the mysql will run on this port container
 - `docker logs Cont_ID` to get the logs of a specific container
 - `docker exec -it Cont_ID /bin/bash` to get the bash of a container, so that we can perform different commands specific to the container, like ls, cd, env 
 - `docker exec -it Cont_ID /bin/sh` same
@@ -79,6 +79,14 @@ You can:
 - `docker network inspect <network_name>`inspect if this network is being used
 -  `docker run -d -p 27017:27017 --name mongo -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=qwerty --network mongo_net mongo`Here we have set up the mongo to run in detach mode, added envs, bound ports, added a new  name, and connected with a network.
 -  `docker rename old_container_name new_container_name` to change name of container anytime.
+
+## Port Binding:
+Containers run in an isolated network.
+So if MySQL runs inside a container on its default port, your host machine cannot access it directly unless you expose (bind) the port.
+
+Host machine port  --->  Container port
+
+-p HOST_PORT:CONTAINER_PORT
 
 ## Docker Network Types:
 1. Host: containers uses the same network as our host machine, and does not have any ip address, it uses the host machine’s IP.
