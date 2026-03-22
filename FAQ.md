@@ -77,12 +77,16 @@ I’ve 'burnt my boats' for KPMG. I haven't spent my time researching other firm
 
 7. Where do you see yourself in the next 5 years?  
 
-"In five years, I see myself as a Technical Team Lead here at KPMG. I want to have grown from an Associate into a manager who handles high-stakes enterprise projects. My goal is to be a leader with 'zero haters'—someone so reliable, approachable, and technically strong that my team feels complete comfort in approaching me with any problem. I want to embody the 'Together' pillar by being the mentor that I am looking for today.
+"In five years, I want to look back and point to something that did not exist when I walked through the door, a system, a process, a solution that solved a real problem the team was sitting with, and made a difference significant enough to be recognized., 
+
+
+
+On the career side, I see myself as a Technical Team Lead here at [company name]. My goal is to be a leader with 'zero haters'—someone so reliable, approachable, and technically strong that my team feels complete comfort in approaching me with any problem.  I want to be the mentor I am looking for today.
 
 
 But beyond the office, I have a 'Glorious Purpose.' I come from a hometown where many children have lost their way and no longer believe that education leads to success. They look up to me because they’ve seen my deep commitment to learning and hard work to reach this firm.
 
-In five years, I want my success at KPMG to be the proof they need. I want to use my position to show them what education and hard work can achieve.  I’m particularly inspired by KPMG’s '10by30' vision to empower 10 million youths, and I hope to lead initiatives like your Cyber Awareness programs in rural schools.  Ultimately, I don't just want a title; I want to be the change I’ve always dreamt of."
+In five years, I want my success at [cpmny name] to be the proof they need."
 
 ----------------------------------
 
