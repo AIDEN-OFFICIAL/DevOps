@@ -20,20 +20,11 @@ It is structured as a self-learning platform where we are required to master an 
 how did you reduce the backend errors and improved scalability?
 
 ----------------------------------
-2.Why KPMG? what do you know about KPMG?
-
-"I want to join KPMG because I’m looking for a firm where technology-enabled advisory isn't just a service, but a core strategy. Having researched KPMG India’s growth since 1993, I’m particularly impressed by your focus on Digital Transformation and the KPMG Ignition Centers. As someone who is currently mastering DevOps and SQA, seeing a Big Four firm prioritize cloud-native innovation and automation labs shows me that my skills can be applied in a meaningful, client-impacting way.
-
-
-What truly resonates with me, though, are the values of 'Excellence' and 'Together.' In my journey as a developer, I’ve realized that delivering quality software isn't just about code; it’s about the Integrity of the system and a culture of collaboration. I’ve seen that KPMG is consistently recognized for its work-life balance and its commitment to continuous learning, which is vital for me because I’m looking for a place where I can grow long term.
-
-Ultimately, I want to contribute my problem-solving mindset—strengthened through consistent practice to a team that values 'Courage' and innovation. I am eager to contribute to KPMG's mission of creating a positive impact 'For Better,' ensuring that the technical solutions we provide to enterprise clients are both secure and scalable."
-----------------------------------
 Why this role (DevOps / QA Automation)? 
 
 "While my background is in Full-Stack development, I see DevOps and QA as the 'complex next level' of engineering. To me, building a feature is just the start; ensuring it is scalable and bug-free is where the real value is created for a client.
 
-I have a very strong foundation in Data Structures and Algorithms (DSA), which gives me the technical stamina to adapt to new tools and complex workflows quickly. This transition aligns perfectly with KPMG’s values of Excellence and Courage. I’m comfortable with any challenge, and I’m ready to apply my problem-solving mindset to ensure we deliver high-quality, reliable solutions to enterprise clients."
+I have a very strong foundation in Data Structures and Algorithms (DSA), which gives me the technical stamina to adapt to new tools and complex workflows quickly. This transition aligns perfectly with the values of Excellence and Courage. I’m comfortable with any challenge, and I’m ready to apply my problem-solving mindset to ensure we deliver high-quality, reliable solutions to enterprise clients."
 
 ----------------------------------
 Why consulting? 
@@ -51,7 +42,7 @@ Action: I used my mastery of DSA to re-engineer the backend logic for efficiency
 
 Result: This shift reduced system errors by 40% and taught me that I find my greatest purpose when I’m making a tangible change for a client.
 
-This is why I'm drawn to consulting.I want to use my technical adaptability to help enterprise clients navigate complex challenges and deliver work that truly matters."
+This is why I'm drawn to consulting. I want to use my technical adaptability to help enterprise clients navigate complex challenges and deliver work that truly matters."
 
 ----------------------------------
 
