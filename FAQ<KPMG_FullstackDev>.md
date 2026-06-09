@@ -25,6 +25,11 @@ How much do you know about Java programming? Do you know Java?
 Yes, I have basic familiarity with Java, including OOP concepts and core syntax. My strongest expertise currently is in full-stack JavaScript development with the MERN stack, where I’ve built and deployed production-level applications. But I’m very comfortable adapting to new technologies, and I’m actively open to strengthening my Java skills in an enterprise environment if the company requires me to.
 
 ----------------------------------
+Conclusion question?
+
+“If you hire me for this role, what would be the first thing you’d like me to focus on during the initial months?”
+
+----------------------------------
 Why did you learn (DevOps / QA Automation)? 
 
 "While my background is in Full-Stack development, I see DevOps and QA as the 'complex next level' of engineering. To me, building a feature is just the start; ensuring it is scalable and bug-free is where the real value is created for a client.
